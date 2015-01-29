@@ -7,7 +7,9 @@ package detectiveWizard;
 
 //for each program you need to be sure to import it from the java file to this file because this is the only file that is read
 import byui.cit260.detectiveWizard.model.EndUser;
-
+import byui.cit260.detectiveWizard.model.Character;
+import byui.cit260.detectiveWizard.model.Location;
+import byui.cit260.detectiveWizard.model.Scene;
 /**
  *
  * @author Cassandra/Lauryn
@@ -19,14 +21,39 @@ public class DetectiveWizard {
      */
     public static void main(String[] args) {
         // Test run EndUser
-        EndUser playerOne = new EndUser();
+      EndUser playerOne = new EndUser();
         
         playerOne.setName("Cassandra Van Lydegraf");
         playerOne.setRole("Famous wizard detective");
         playerOne.setScore(17);
         
         String playerInfo = playerOne.toString();
-        System.out.println(playerInfo);
+        System.out.println(playerInfo);  
+        
+        //Test run Character
+        Character characterOne = new Character();
+        
+        characterOne.setName("Tedd Williams");
+        characterOne.setRole("Killer");
+        
+        String characterInfo = characterOne.toString();
+        System.out.println(characterInfo);
+        
+        //Test run Location
+        Location roomOne = new Location();
+        
+        roomOne.setCoordinate("Lobby");
+        
+        String roomInfo = roomOne.toString();
+        System.out.println(roomInfo);
+        
+        //Test run Scene
+        Scene sceneOne = new Scene();
+        
+        sceneOne.setDescription("Blood pooled around the body with footprints leading off down the hall.");
+        
+        String sceneInfo = sceneOne.toString();
+        System.out.println(sceneInfo);
     }
     
 }
