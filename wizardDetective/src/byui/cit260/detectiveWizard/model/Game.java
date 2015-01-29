@@ -6,34 +6,39 @@
 package byui.cit260.detectiveWizard.model;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.Objects;
 /**
  *
- * @author Cassandra/Lauryn
+ * @author Cassandra
  */
-//extends (inheritance) Inventory (parent class)
-public class PhysicalInventory /*extends Inventory*/ implements Serializable{
+public class Game implements Serializable{
     
     //class instance variables
-    private String use;
-
+    private int score;
+    private Date date;
+    
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
-    public PhysicalInventory() {
+
+    public Game() {
     }
     
     //toString()
     //alt-fn-insert (Source-Insert Code), toString(), (select all) generate
+
     @Override
     public String toString() {
-        return "PhysicalInventory{" + "use=" + use + '}';
+        return "Game{" + "score=" + score + ", date=" + date + '}';
     }
-
+    
     //equals(), hashCode()
     //alt-fn-insert (Source-Insert Code), equals() and hashCode(), (select all)generate
+
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 11 * hash + Objects.hashCode(this.use);
+        int hash = 7;
+        hash = 17 * hash + this.score;
+        hash = 17 * hash + Objects.hashCode(this.date);
         return hash;
     }
 
@@ -45,19 +50,29 @@ public class PhysicalInventory /*extends Inventory*/ implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final PhysicalInventory other = (PhysicalInventory) obj;
-        if (!Objects.equals(this.use, other.use)) {
+        final Game other = (Game) obj;
+        if (this.score != other.score) {
+            return false;
+        }
+        if (!Objects.equals(this.date, other.date)) {
             return false;
         }
         return true;
-    }  
-    
-    public String getUse() {
-        return use;
     }
     
-    //void needs to be lowercased - solves problem with needing a return
-    public void setUse(String use){
-        this.use = use;
+    public int getScore(){
+        return score;
+    }
+    
+    public Date getDate(){
+        return date;
+    }
+    
+    public void setScore(int score){
+        this.score = score;
+    }
+    
+    public void setDate(Date date){
+        this.date = date;
     }
 }
