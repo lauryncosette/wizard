@@ -8,6 +8,7 @@ package detectiveWizard;
 //for each program you need to be sure to import it from the java file to this file because this is the only file that is read
 import byui.cit260.detectiveWizard.model.EndUser;
 import byui.cit260.detectiveWizard.model.Character;
+import byui.cit260.detectiveWizard.model.Game;
 import byui.cit260.detectiveWizard.model.Location;
 import byui.cit260.detectiveWizard.model.Scene;
 /**
@@ -54,6 +55,13 @@ public class DetectiveWizard {
         
         String sceneInfo = sceneOne.toString();
         System.out.println(sceneInfo);
+        
+        //Test run Game
+        Game gameOne = new Game();
+        
+        gameOne.setScore(17);
+        System.out.println(gameOne.toString());
+        
     }
     
 }

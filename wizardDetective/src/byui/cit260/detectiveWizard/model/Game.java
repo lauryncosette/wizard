@@ -21,6 +21,7 @@ public class Game implements Serializable{
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
 
     public Game() {
+        date = new Date();
     }
     
     //toString()
