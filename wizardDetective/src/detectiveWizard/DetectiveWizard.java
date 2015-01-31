@@ -84,17 +84,26 @@ public class DetectiveWizard {
         inventoryItemsOne.setDescription("Bloody");
         inventoryItemsOne.setItemName("Candle Stick");
         
+        String inventoryItemsInfo = inventoryItemsOne.toString();
+                System.out.println(inventoryItemsInfo);
+        
         // Test run NonphysicalInventory
         
         NonphysicalInventory nonphysicalInventoryOne = new NonphysicalInventory();
         
         nonphysicalInventoryOne.setItemType("Journal Entry");
         
+        String nonphysicalInventoryInfo = nonphysicalInventoryOne.toString();
+        System.out.println(nonphysicalInventoryInfo);
+        
         // Test run Rumor 
         
         Rumor rumorOne = new Rumor();
         
         rumorOne.setDescription("The Truth");
+        
+        String rumorInfo = rumorOne.toString();
+        System.out.println(rumorInfo);
         
         
         
