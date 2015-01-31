@@ -13,6 +13,7 @@ import byui.cit260.detectiveWizard.model.Game;
 import byui.cit260.detectiveWizard.model.InventoryItems;
 import byui.cit260.detectiveWizard.model.Location;
 import byui.cit260.detectiveWizard.model.NonphysicalInventory;
+import byui.cit260.detectiveWizard.model.Rumor;
 import byui.cit260.detectiveWizard.model.Scene;
 
 /**
@@ -88,6 +89,13 @@ public class DetectiveWizard {
         NonphysicalInventory nonphysicalInventoryOne = new NonphysicalInventory();
         
         nonphysicalInventoryOne.setItemType("Journal Entry");
+        
+        // Test run Rumor 
+        
+        Rumor rumorOne = new Rumor();
+        
+        rumorOne.setDescription("The Truth");
+        
         
         
     }
