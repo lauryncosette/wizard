@@ -8,9 +8,11 @@ package detectiveWizard;
 //for each program you need to be sure to import it from the java file to this file because this is the only file that is read
 import byui.cit260.detectiveWizard.model.EndUser;
 import byui.cit260.detectiveWizard.model.Character;
+import byui.cit260.detectiveWizard.model.Clue;
 import byui.cit260.detectiveWizard.model.Game;
 import byui.cit260.detectiveWizard.model.Location;
 import byui.cit260.detectiveWizard.model.Scene;
+
 /**
  *
  * @author Cassandra/Lauryn
@@ -61,6 +63,17 @@ public class DetectiveWizard {
         
         gameOne.setScore(17);
         System.out.println(gameOne.toString());
+        
+       //Test run Clue
+        Clue clueOne = new Clue();
+        
+        clueOne.setItemType("Poster");
+        clueOne.setItemName("Famous Band");
+        clueOne.setItemDescription("Information about Suspect");
+        
+        String clueInfo = clueOne.toString();
+        System.out.println(clueInfo);
+        
         
     }
     
