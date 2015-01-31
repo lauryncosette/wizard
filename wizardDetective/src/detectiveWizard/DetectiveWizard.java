@@ -12,6 +12,7 @@ import byui.cit260.detectiveWizard.model.Clue;
 import byui.cit260.detectiveWizard.model.Game;
 import byui.cit260.detectiveWizard.model.InventoryItems;
 import byui.cit260.detectiveWizard.model.Location;
+import byui.cit260.detectiveWizard.model.NonphysicalInventory;
 import byui.cit260.detectiveWizard.model.Scene;
 
 /**
@@ -81,6 +82,13 @@ public class DetectiveWizard {
         
         inventoryItemsOne.setDescription("Bloody");
         inventoryItemsOne.setItemName("Candle Stick");
+        
+        // Test run NonphysicalInventory
+        
+        NonphysicalInventory nonphysicalInventoryOne = new NonphysicalInventory();
+        
+        nonphysicalInventoryOne.setItemType("Journal Entry");
+        
         
     }
     
