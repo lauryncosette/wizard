@@ -10,6 +10,7 @@ import byui.cit260.detectiveWizard.model.EndUser;
 import byui.cit260.detectiveWizard.model.Character;
 import byui.cit260.detectiveWizard.model.Clue;
 import byui.cit260.detectiveWizard.model.Game;
+import byui.cit260.detectiveWizard.model.InventoryItems;
 import byui.cit260.detectiveWizard.model.Location;
 import byui.cit260.detectiveWizard.model.Scene;
 
@@ -74,6 +75,12 @@ public class DetectiveWizard {
         String clueInfo = clueOne.toString();
         System.out.println(clueInfo);
         
+        // Test run InventoryItems
+        
+        InventoryItems inventoryItemsOne = new InventoryItems();
+        
+        inventoryItemsOne.setDescription("Bloody");
+        inventoryItemsOne.setItemName("Candle Stick");
         
     }
     
