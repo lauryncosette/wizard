@@ -17,6 +17,7 @@ public class Character implements Serializable{
     //class instance
     private String name;
     private String role;
+    private double height;
     
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
     public Character() {
@@ -26,7 +27,7 @@ public class Character implements Serializable{
     //alt-fn-insert (Source-Insert Code), toString(), (select all) generate
     @Override
     public String toString() {
-        return "Character{" + "name=" + name + ", role=" + role + '}';
+        return "Character{" + "name=" + name + ", role=" + role + ", height=" + height + '}';
     }
     
     //equals(), hashCode()
@@ -34,8 +35,9 @@ public class Character implements Serializable{
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 47 * hash + Objects.hashCode(this.name);
-        hash = 47 * hash + Objects.hashCode(this.role);
+        hash = 29 * hash + Objects.hashCode(this.name);
+        hash = 29 * hash + Objects.hashCode(this.role);
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.height) ^ (Double.doubleToLongBits(this.height) >>> 32));
         return hash;
     }
 
@@ -54,9 +56,12 @@ public class Character implements Serializable{
         if (!Objects.equals(this.role, other.role)) {
             return false;
         }
+        if (Double.doubleToLongBits(this.height) != Double.doubleToLongBits(other.height)) {
+            return false;
+        }
         return true;
     }
-    
+        
     public String getName(){
         return name;
     }
@@ -65,11 +70,18 @@ public class Character implements Serializable{
         return role;
     }
     
+    public double getHeight(){
+        return height;
+    }
     public void setName(String name){
         this.name = name;
     }
     
     public void setRole(String role){
         this.role = role;
+    }
+    
+    public void setHeight(double height){
+        this.height = height;
     }
 }
