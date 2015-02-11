@@ -25,7 +25,7 @@ public class PlayerControlTest {
         System.out.println("calcKillerHint");
     
         // Test case one
-        System.out.println ("test case #1");
+        //System.out.println ("test case #1");
         
         double killerHeight = 6.7;
         double characterHeight = 6.7;
@@ -37,56 +37,68 @@ public class PlayerControlTest {
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
         
+        // test case 1 failed
+        
+        
         //Test case 2
         //System.out.println ("test case #2");
         
         //input
-        //killerHeight = 6.7;
-        //characterHeight = 0;
-        //distance = 6;
+        //double killerHeight = 6.7;
+        //double characterHeight = 0;
+        //double distance = 6;
         
         //expected output
-        //expResult = -1;
+        //double expResult = -1;
         
         //call function
-        //result = instance.calcKillerHint(killerHeight, characterHeight, distance);
+        //double result = instance.calcKillerHint(killerHeight, characterHeight, distance);
         
         //compare expected return with actual return
         //assertEquals(expResult, result, 0.0001);
+        
+        // test case 2 passed
+        
         
         //Test case 3
         //System.out.println ("test case #3");
         
         //input
-        //killerHeight = 0;
-        //characterHeight = 7;
-        //distance = 6;
+        //double killerHeight = 0;
+        //double characterHeight = 7;
+        //double distance = 6;
         
         //expected output
-        //expResult = -2;
+        //double expResult = -2;
         
         //call function
-        //result = instance.calcKillerHint(killerHeight, characterHeight, distance);
+        //double result = instance.calcKillerHint(killerHeight, characterHeight, distance);
         
         //compare expected return with actual return
         //assertEquals(expResult, result, 0.0001);
+        
+        // test case 3 passed
+        
         
         //Test case 4
         //System.out.println ("test case #4");
         
         //input
-        //killerHeight = 6.7;
-        //characterHeight = 6;
-        //distance = 0;
+        //double killerHeight = 6.7;
+        //double characterHeight = 6;
+        //double distance = 0;
         
         //expected output
-        //expResult = -3;
+        //double expResult = -3;
         
         //call function
-        //result = instance.calcKillerHint(killerHeight, characterHeight, distance);
+        //double result = instance.calcKillerHint(killerHeight, characterHeight, distance);
         
         //compare expected return with actual return
         //assertEquals(expResult, result, 0.0001);
+        
+        //test case 4 passed
+        
         
         //ctrl f6 to run test
     }

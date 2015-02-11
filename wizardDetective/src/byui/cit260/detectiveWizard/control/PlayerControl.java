@@ -22,21 +22,14 @@ public class PlayerControl {
             return -2;
         }
     
-        else if(distance <=0 || distance >=6){
+        else if(distance <=0 || distance >=7){
             return -3;    
         }
         
         else {
             
             double answer = (killerHeight * -1 / distance) * distance + characterHeight;
-            
-            if (answer == 0){
-                return answer;
-            }
-            
-            else {
-                return 1;
-            }
+            return answer;
         }
     }
 }
