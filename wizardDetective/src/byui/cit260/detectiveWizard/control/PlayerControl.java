@@ -18,20 +18,18 @@ public class PlayerControl {
                 return -1;
             }
         
-            else if(killerHeight !=6.7){
+            if(killerHeight !=6.7){
                 return -2;
             }
     
             //error was distane was >= 6.  6 is the desired distance number.  Simple fix.
-            else if(distance <=0 || distance >=7){
+            if(distance <=0 || distance >=7){
                 return -3;    
             }
-        
-            else {
             
-                double answer = (killerHeight * -1 / distance) * distance + characterHeight;
-                return answer;
-            }
+            double answer = (killerHeight * -1 / distance) * distance + characterHeight;
+            return answer;
+            
         }
     
         public double calcScoreFirstTry(int necessaryItem, int unnecessaryItem, int characterNumber){
@@ -40,17 +38,16 @@ public class PlayerControl {
                 return -1;
             }
             
-            else if (unnecessaryItem <=-1 || unnecessaryItem >=43){
+            if (unnecessaryItem <=-1 || unnecessaryItem >=43){
                 return -2;
             }
             
-            else if (characterNumber <=-1 || characterNumber >=2){
+            if (characterNumber <=-1 || characterNumber >=2){
                 return -3;
             }
             
-            else {
-                double score = 100 + ((6 - necessaryItem) - 2.5) + (unnecessaryItem - (5 / 14)) + (-50 * (1 - characterNumber));;
-                return 1;
-            }
+            double score = 100 + ((6 - necessaryItem) - 2.5) + (unnecessaryItem - (5 / 14)) + (-50 * (1 - characterNumber));;
+            return 1;
+            
         }
 }

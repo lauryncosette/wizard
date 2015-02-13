@@ -20,184 +20,184 @@ public class PlayerControlTest {
     /**
      * Test of calcKillerHint method, of class PlayerControl.
      */
-    //@Test
-    //public void testCalcKillerHint() {
-        //System.out.println("calcKillerHint");
+    @Test
+    public void testCalcKillerHint() {
+        System.out.println("calcKillerHint");
     
         // Test case one
-        //System.out.println ("test case #1");
+        System.out.println ("test case #1");
         
-        //double killerHeight = 6.7;
-        //double characterHeight = 6.7;
-        //double distance = 6;
-        //PlayerControl instance = new PlayerControl();
-        //double expResult = 0;
-        //double result = instance.calcKillerHint(killerHeight, characterHeight, distance);
-        //assertEquals(expResult, result, 0.0001);
+        double killerHeight = 6.7;
+        double characterHeight = 6.7;
+        double distance = 6;
+        PlayerControl instance = new PlayerControl();
+        double expResult = 0;
+        double result = instance.calcKillerHint(killerHeight, characterHeight, distance);
+        assertEquals(expResult, result, 0.0001);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
         
-        // test case 1 failed
+        // test case 1 pass
         
         
         //Test case 2
-        //System.out.println ("test case #2");
+        System.out.println ("test case #2");
         
         //input
-        //double killerHeight = 6.7;
-        //double characterHeight = 0;
-        //double distance = 6;
-        
+        killerHeight = 6.7;
+        characterHeight = 0;
+        distance = 6;
+        instance = new PlayerControl();
         //expected output
-        //double expResult = -1;
+        expResult = -1;
         
         //call function
-        //double result = instance.calcKillerHint(killerHeight, characterHeight, distance);
+        result = instance.calcKillerHint(killerHeight, characterHeight, distance);
         
         //compare expected return with actual return
-        //assertEquals(expResult, result, 0.0001);
+        assertEquals(expResult, result, 0.0001);
         
         // test case 2 passed
         
         
         //Test case 3
-        //System.out.println ("test case #3");
+        System.out.println ("test case #3");
         
         //input
-        //double killerHeight = 0;
-        //double characterHeight = 7;
-        //double distance = 6;
-        
+        killerHeight = 0;
+        characterHeight = 7;
+        distance = 6;
+        instance = new PlayerControl();
         //expected output
-        //double expResult = -2;
+        expResult = -2;
         
         //call function
-        //double result = instance.calcKillerHint(killerHeight, characterHeight, distance);
+        result = instance.calcKillerHint(killerHeight, characterHeight, distance);
         
         //compare expected return with actual return
-        //assertEquals(expResult, result, 0.0001);
+        assertEquals(expResult, result, 0.0001);
         
         // test case 3 passed
         
         
         //Test case 4
-        //System.out.println ("test case #4");
+        System.out.println ("test case #4");
         
         //input
-        //double killerHeight = 6.7;
-        //double characterHeight = 6;
-        //double distance = 0;
-        
+        killerHeight = 6.7;
+        characterHeight = 6;
+        distance = 0;
+        instance = new PlayerControl();
         //expected output
-        //double expResult = -3;
+        expResult = -3;
         
         //call function
-        //double result = instance.calcKillerHint(killerHeight, characterHeight, distance);
+        result = instance.calcKillerHint(killerHeight, characterHeight, distance);
         
         //compare expected return with actual return
-        //assertEquals(expResult, result, 0.0001);
+        assertEquals(expResult, result, 0.0001);
         
         //test case 4 passed
         
         
         //ctrl f6 to run test
-    //}
+    }
 
     /**
      * Test of calcScoreFirstTry method, of class PlayerControl.
      */
-    //@Test
-    //public void testCalcScoreFirstTry() {
-        //System.out.println("calcScoreFirstTry");
-        //System.out.println("Test #1");
-        //int necessaryItem = 0;
-        //int unnecessaryItem = 0;
-        //int characterNumber = 0;
-        //PlayerControl instance = new PlayerControl();
-        //double expResult = 1;
-        //double result = instance.calcScoreFirstTry(necessaryItem, unnecessaryItem, characterNumber);
-        //assertEquals(expResult, result, 0.0001);
+    @Test
+    public void testCalcScoreFirstTry() {
+        System.out.println("calcScoreFirstTry");
+        System.out.println("Test #1");
+        int necessaryItem = 0;
+        int unnecessaryItem = 0;
+        int characterNumber = 0;
+        PlayerControl instance = new PlayerControl();
+        double expResult = 1;
+        double result = instance.calcScoreFirstTry(necessaryItem, unnecessaryItem, characterNumber);
+        assertEquals(expResult, result, 0.0001);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
         
         //Test one pass
         
-        //System.out.println("Test #2");
-        //int necessaryItem = 6;
-        //int unnecessaryItem = 42;
-        //int characterNumber = 1;
+        System.out.println("Test #2");
+        necessaryItem = 6;
+        unnecessaryItem = 42;
+        characterNumber = 1;
         
-        //double expResult = 1;
-        //double result = instance.calcScoreFirstTry(necessaryItem, unnecessaryItem, characterNumber);
-        //assertEquals(expResult, result, 0.0001);
+        expResult = 1;
+        result = instance.calcScoreFirstTry(necessaryItem, unnecessaryItem, characterNumber);
+        assertEquals(expResult, result, 0.0001);
         
         //Test two pass
         
-        //System.out.println("Test #3");
-        //int necessaryItem = -1;
-        //int unnecessaryItem = 42;
-        //int characterNumber = 1;
+        System.out.println("Test #3");
+        necessaryItem = -1;
+        unnecessaryItem = 42;
+        characterNumber = 1;
         
-        //double expResult = -1;
-        //double result = instance.calcScoreFirstTry(necessaryItem, unnecessaryItem, characterNumber);
-        //assertEquals(expResult, result, 0.0001);
+        expResult = -1;
+        result = instance.calcScoreFirstTry(necessaryItem, unnecessaryItem, characterNumber);
+        assertEquals(expResult, result, 0.0001);
         
         //Test three pass
         
-        //System.out.println("Test #4");
-        //int necessaryItem = 7;
-        //int unnecessaryItem = 42;
-        //int characterNumber = 1;
+        System.out.println("Test #4");
+        necessaryItem = 7;
+        unnecessaryItem = 42;
+        characterNumber = 1;
         
-        //double expResult = -1;
-        //double result = instance.calcScoreFirstTry(necessaryItem, unnecessaryItem, characterNumber);
-        //assertEquals(expResult, result, 0.0001);
+        expResult = -1;
+        result = instance.calcScoreFirstTry(necessaryItem, unnecessaryItem, characterNumber);
+        assertEquals(expResult, result, 0.0001);
         
         //Test four pass
         
-        //System.out.println("Test #5");
-        //int necessaryItem = 6;
-        //int unnecessaryItem = -1;
-        //int characterNumber = 1;
+        System.out.println("Test #5");
+        necessaryItem = 6;
+        unnecessaryItem = -1;
+        characterNumber = 1;
         
-        //double expResult = -2;
-        //double result = instance.calcScoreFirstTry(necessaryItem, unnecessaryItem, characterNumber);
-        //assertEquals(expResult, result, 0.0001);
+        expResult = -2;
+        result = instance.calcScoreFirstTry(necessaryItem, unnecessaryItem, characterNumber);
+        assertEquals(expResult, result, 0.0001);
         
         //Test five pass
 
-        //System.out.println("Test #6");
-        //int necessaryItem = 6;
-        //int unnecessaryItem = 43;
-        //int characterNumber = 1;
+        System.out.println("Test #6");
+        necessaryItem = 6;
+        unnecessaryItem = 43;
+        characterNumber = 1;
         
-        //double expResult = -2;
-        //double result = instance.calcScoreFirstTry(necessaryItem, unnecessaryItem, characterNumber);
-        //assertEquals(expResult, result, 0.0001);
+        expResult = -2;
+        result = instance.calcScoreFirstTry(necessaryItem, unnecessaryItem, characterNumber);
+        assertEquals(expResult, result, 0.0001);
         
         //Test six pass
         
-        //System.out.println("Test #7");
-        //int necessaryItem = 6;
-        //int unnecessaryItem = 42;
-        //int characterNumber = -1;
+        System.out.println("Test #7");
+        necessaryItem = 6;
+        unnecessaryItem = 42;
+        characterNumber = -1;
         
-        //double expResult = -3;
-        //double result = instance.calcScoreFirstTry(necessaryItem, unnecessaryItem, characterNumber);
-        //assertEquals(expResult, result, 0.0001);
+        expResult = -3;
+        result = instance.calcScoreFirstTry(necessaryItem, unnecessaryItem, characterNumber);
+        assertEquals(expResult, result, 0.0001);
         
         //Test seven pass
         
-        //System.out.println("Test #8");
-        //int necessaryItem = 6;
-        //int unnecessaryItem = 42;
-        //int characterNumber = 2;
+        System.out.println("Test #8");
+        necessaryItem = 6;
+        unnecessaryItem = 42;
+        characterNumber = 2;
         
-        //double expResult = -3;
-        //double result = instance.calcScoreFirstTry(necessaryItem, unnecessaryItem, characterNumber);
-        //assertEquals(expResult, result, 0.0001);
+        expResult = -3;
+        result = instance.calcScoreFirstTry(necessaryItem, unnecessaryItem, characterNumber);
+        assertEquals(expResult, result, 0.0001);
         
         //Test eight pass
-    //}
+    }
     
 }
