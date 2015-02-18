@@ -24,6 +24,10 @@ import byui.cit260.detectiveWizard.control.GameControl;
 import byui.cit260.detectiveWizard.control.PlayerControl;
 import byui.cit260.detectiveWizard.control.ProgramControl;
 
+//View layer imprts
+import byui.cit260.detectiveWizard.view.StartProgramView;
+
+
 /**
  *
  * @author Cassandra/Lauryn
@@ -34,15 +38,9 @@ public class DetectiveWizard {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // Test run EndUser
-      EndUser playerOne = new EndUser();
-        
-        playerOne.setName("Cassandra Van Lydegraf");
-        playerOne.setRole("Famous wizard detective");
-        playerOne.setScore(17);
-        
-        String playerInfo = playerOne.toString();
-        System.out.println(playerInfo);
+        //create StartPRogramView and start the program
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.startProgram();
     }
     
 }
