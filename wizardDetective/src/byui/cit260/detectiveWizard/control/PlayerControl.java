@@ -46,6 +46,7 @@ public class PlayerControl {
                 return -3;
             }
             
+            //score is not returned yet.  This was set up for testing.
             double score = 100 + ((6 - necessaryItem) - 2.5) + (unnecessaryItem - (5 / 14)) + (-50 * (1 - characterNumber));;
             return 1;
             
