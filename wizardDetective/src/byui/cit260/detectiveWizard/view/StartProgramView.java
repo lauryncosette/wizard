@@ -37,7 +37,7 @@ public class StartProgramView {
     public void displayBanner() {
         System.out.println("\n\n*******************************************");
         System.out.println("*                                         *"
-                          +"\n* This is the game of Wizard Detective    *"
+                          +"\n* This is the game of Wizard Detective.   *"
                           +"\n* In this game you are a detective by day *"
                           +"\n* and a wizard by night.  One night you   *"
                           +"\n* were called into work to investigate a  *"
