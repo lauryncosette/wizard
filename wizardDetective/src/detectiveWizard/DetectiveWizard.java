@@ -33,7 +33,26 @@ import byui.cit260.detectiveWizard.view.StartProgramView;
  * @author Cassandra/Lauryn
  */
 public class DetectiveWizard {
+    
+    private static Game currentGame = null;
+    private static Player player = null;
 
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        DetectiveWizard.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        DetectiveWizard.player = player;
+    }
+    
     /**
      * @param args the command line arguments
      */
