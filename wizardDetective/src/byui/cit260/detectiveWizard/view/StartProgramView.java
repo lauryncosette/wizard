@@ -5,6 +5,10 @@
  */
 package byui.cit260.detectiveWizard.view;
 
+import byui.cit260.detectiveWizard.control.ProgramControl;
+import byui.cit260.detectiveWizard.model.Player;
+import java.util.Scanner;
+
 /**
  *
  * @author Cassandra
@@ -16,12 +20,14 @@ public class StartProgramView {
         //Display the banner screen - tested/passed
         this.displayBanner();
         
-        //prompt the player to enter their name, retrieve the name of the player
-        //String playersName = this.getPlayersName();
+        //prompt the player to enter their name, retrieve the name of the player - tested/passed
+        String playersName = this.getPlayersName();
         
-        //create and save the player object
+        //create and save the player object - tested/passed
+        Player player = ProgramControl.createPlayer(playersName);
         
         //display a personalized welcome message
+        //this.displayWelcomeMessage(player);
         
         //display the main menu
     }
@@ -59,34 +65,41 @@ public class StartProgramView {
                           +"\n*******************************************");
     }
 
-    //public String getPlayersName() {
+    public String getPlayersName() {
         
         //indicates if the name has been retrieved
-        //boolean valid = false;
-        //String playersName = null;
+        boolean valid = false;
+        String playersName = null;
         //keyboard input stream
-        //Scanner keyboard = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
         
         //while a valid name has not been retrieved
-        //while(!valid){
+        while(!valid){
             
             //prompt for the player's name
-            //System.out.println("Enter the player's name below:");
+            System.out.println("Enter the player's name below:");
             
             //get the name from the keyboard and trim of the blanks
-            //playersName = keyboard.nextLine();
-            //playersName = playersName.trim();
+            playersName = keyboard.nextLine();
+            playersName = playersName.trim();
             
             //if the name is invalid (less than two character in length)
-            //if (playersName.length() < 2){
-                //System.out.println("Invalid name = the name must not be blank");
+            if (playersName.length() < 2){
+                System.out.println("Invalid name = the name must not be blank");
                 //and repeat again
-                //continue;
-            //}
+                continue;
+            }
             //exit the repetition
-            //break;
-        //}
+            break;
+        }
         //return the name
-        //return playersName;
+        return playersName;
+    }
+
+    //private void displayWelcomeMessage(Player player) {
+        //System.out.println("\n\n====================================");
+        //System.out.println("\tWelcome to the game" + player.getName());
+        //System.out.println("\tWe hope you have a lot of fun!");
+        //System.out.println("====================================");
     //}
 }

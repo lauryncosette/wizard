@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @author Cassandra
  */
-public class EndUser implements Serializable{
+public class Player implements Serializable{
     
     //class instance variables
     private String name;
@@ -19,7 +19,7 @@ public class EndUser implements Serializable{
     private int score;
     
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
-    public EndUser() {
+    public Player() {
     }
     
     //toString()
@@ -50,7 +50,7 @@ public class EndUser implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final EndUser other = (EndUser) obj;
+        final Player other = (Player) obj;
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
