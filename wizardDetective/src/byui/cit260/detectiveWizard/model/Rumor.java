@@ -42,7 +42,7 @@ public class Rumor implements Serializable{
         final Rumor other = (Rumor) obj;
         if (!Objects.equals(this.description, other.description)) {
             return false;
-        }
+        } 
         return true;
     }
     
