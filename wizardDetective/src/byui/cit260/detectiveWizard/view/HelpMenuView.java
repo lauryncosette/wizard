@@ -7,26 +7,28 @@ package byui.cit260.detectiveWizard.view;
 
 import java.util.Scanner;
 
-
-public class MainMenuView {
-
-    //Code for displaying MainMenu
+/**
+ *
+ * @author Cassandra
+ */
+public class HelpMenuView {
+    
+  //Code for displaying HelpMenu
     private final String MENU = "\n"
             + "\n-----------------------------------"
-            + "\n| Main Menu                       |"
+            + "\n| Help Menu                       |"
             + "\n-----------------------------------"
-            + "\nP - Play New Game"
-            + "\nS - Save Game"
-            + "\nL - Load Game"
-            + "\nH - Help"
+            + "\nM - How to move around the map"
+            + "\nC - Controls, how the game works"
+            + "\nI - How to investigate a room"
             + "\nE - Exit";
     
-    void displayMenu() {
+void displayMenu() {
         
         char selection = ' ';
         do {
             
-            //displays the MainMenu
+            //displays the HelpMenu
             System.out.println(MENU);
             
             //get user's selection
@@ -77,20 +79,17 @@ public class MainMenuView {
         
         switch (selection){
             //create new game
-            case 'P':
-                this.startNewGame();
+            case 'M':
+                this.howToMove();
                 break;
             //help menu
-            case 'H':
-                this.displayHelpMenu();
+            case 'C':
+                this.control();
                 break;
             //save game
-            case 'S':
-                this.saveGame();
+            case 'I':
+                this.investigateRoom();
                 break;
-            //load game
-            case 'L':
-                this.startExistingGame();
             //exit
             case 'E':
                 break;
@@ -99,22 +98,18 @@ public class MainMenuView {
         }
     }
 
-    private void startNewGame() {
-        System.out.println("*** startNewGame function called ***");
+    private void howToMove() {
+        System.out.println("How to move your character from one location to another.");
     }
 
-    private void displayHelpMenu() {
-        HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayMenu();
+    private void control() {
+        System.out.println("How to look in your inventory."
+                + "\nHow to use an inventory item."
+                + "\nHow to view the map."
+                + "\nHow to use magical abilities.");
     }
 
-    private void saveGame() {
-        System.out.println("*** saveGame function called ***");
+    private void investigateRoom() {
+        System.out.println("How to investigate different items in a room.");
     }
-
-    private void startExistingGame() {
-        System.out.println("*** startExistingGame function called ***");
-    }
-    
 }
-
