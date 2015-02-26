@@ -17,6 +17,7 @@ public class Player implements Serializable{
     private String name;
     private String role;
     private int score;
+    private int numberOfClue = 7;
     
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
     public Player() {
@@ -27,7 +28,7 @@ public class Player implements Serializable{
 
     @Override
     public String toString() {
-        return "EndUser{" + "name=" + name + ", role=" + role + ", score=" + score + '}';
+        return "Player{" + "name=" + name + ", role=" + role + ", score=" + score + ", numberOfClue=" + numberOfClue + '}';
     }
     
     //equals(), hashCode()
@@ -39,6 +40,7 @@ public class Player implements Serializable{
         hash = 97 * hash + Objects.hashCode(this.name);
         hash = 97 * hash + Objects.hashCode(this.role);
         hash = 97 * hash + this.score;
+        hash = 97 * hash + this.numberOfClue;
         return hash;
     }
 
@@ -60,6 +62,9 @@ public class Player implements Serializable{
         if (this.score != other.score) {
             return false;
         }
+        if (this.numberOfClue != other.numberOfClue) {
+            return false;
+        }
         return true;
     }
     
@@ -75,6 +80,10 @@ public class Player implements Serializable{
         return score;
     }
     
+    public int getNumberOfClue(){
+        return numberOfClue;
+    }
+    
     public void setName(String name){
         this.name = name;
     }
@@ -85,5 +94,9 @@ public class Player implements Serializable{
     
     public void setScore(int score){
         this.score = score;
+    }
+    
+    public void setNumberOfClue(){
+        this.numberOfClue = numberOfClue;
     }
 }
