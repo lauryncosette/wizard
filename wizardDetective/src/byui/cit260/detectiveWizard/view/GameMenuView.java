@@ -67,10 +67,7 @@ private String getInput() {
         return input;//return the name
                 }
 
-    private void getInput() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+  
     private void doAction(char selection) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
