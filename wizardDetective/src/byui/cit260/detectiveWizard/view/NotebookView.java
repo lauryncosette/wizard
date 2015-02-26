@@ -5,29 +5,48 @@
  */
 package byui.cit260.detectiveWizard.view;
 
+import detectiveWizard.DetectiveWizard;
 import java.util.Scanner;
 
 /**
  *
- * @author Cassandra
+ * @author Mathew
  */
-public class InventoryMenuView {
-    //Code for displaying HelpMenu
+public class NotebookView {
+    
+    //Code for displaying notebookMenu when not enough clues are accumilated
     private final String MENU = "\n"
             + "\n-----------------------------------"
-            + "\n| Inventory Menu                       |"
+            + "\n| Notebook                        |"
             + "\n-----------------------------------"
-            + "\nB - View backpack"
-            + "\nN - View notebook"
+            + "\nD - Description of clue"
             + "\nE - Exit";
     
-void displayMenu() {
+    //code for displaying notebook menu when enough clues are accumilated to end game
+    private final String ENDMENU = "\n"
+            + "\n-----------------------------------"
+            + "\n| Notebook                        |"
+            + "\n-----------------------------------"
+            + "\nD - Description of clue"
+            + "\nF - Finish Game"
+            + "\nE - Exit";
+    
+    void displayMenu() {
         
         char selection = ' ';
         do {
             
-            //displays the HelpMenu
+            //display inventory list
+            System.out.println("***List of items in notebook***");
+            
+            if(DetectiveWizard.getPlayer().getNumberOfClue() >=7){
+                System.out.println(ENDMENU);
+            }
+            
+            else{
+            //displays the MainMenu
             System.out.println(MENU);
+            }
             
             //get user's selection
             String input = this.getInput();
@@ -76,13 +95,13 @@ void displayMenu() {
     private void doAction(char selection) {
         
         switch (selection){
-            //create new game
-            case 'B':
-                this.viewBackpack();
+            //get item description
+            case 'D':
+                this.description();
                 break;
-            //help menu
-            case 'N':
-                this.viewNotebook();
+            //finish game
+            case 'F':
+                this.finishGame();
                 break;
             //exit
             case 'E':
@@ -92,15 +111,12 @@ void displayMenu() {
         }
     }
 
-    private void viewBackpack() {
-        System.out.println("\n-----------------------------------"
-            + "\n| Backpack                        |"
-            + "\n-----------------------------------"
-            + "\nE - Exit");
+    private void description() {
+        System.out.println("*** description function called ***");
     }
 
-    private void viewNotebook() {
-        NotebookView notebookMenu = new NotebookView();
-        notebookMenu.displayMenu();
+    private void finishGame() {
+        System.out.println("***finishGame function called***");
     }
+    
 }

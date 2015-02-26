@@ -101,6 +101,9 @@ public class MainMenuView {
 
     private void startNewGame() {
         System.out.println("*** startNewGame function called ***");
+        //Start new game function will create new player and will then call the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
     }
 
     private void displayHelpMenu() {
