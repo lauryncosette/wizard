@@ -12,9 +12,9 @@ public class MainMenuView {
 
     //Code for displaying MainMenu
     private final String MENU = "\n"
-            + "\n-----------------------------------"
-            + "\n| Main Menu                       |"
-            + "\n-----------------------------------"
+            + "\n-------------------------------------------"
+            + "\n| Main Menu                               |"
+            + "\n-------------------------------------------"
             + "\nP - Play New Game"
             + "\nS - Save Game"
             + "\nL - Load Game"

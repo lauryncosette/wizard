@@ -15,9 +15,9 @@ public class HelpMenuView {
     
   //Code for displaying HelpMenu
     private final String MENU = "\n"
-            + "\n-----------------------------------"
-            + "\n| Help Menu                       |"
-            + "\n-----------------------------------"
+            + "\n-------------------------------------------"
+            + "\n| Help Menu                               |"
+            + "\n-------------------------------------------"
             + "\nM - How to move around the map"
             + "\nC - Controls, how the game works"
             + "\nI - How to investigate a room"

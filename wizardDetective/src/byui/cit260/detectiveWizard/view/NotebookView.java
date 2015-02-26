@@ -16,17 +16,17 @@ public class NotebookView {
     
     //Code for displaying notebookMenu when not enough clues are accumilated
     private final String MENU = "\n"
-            + "\n-----------------------------------"
-            + "\n| Notebook                        |"
-            + "\n-----------------------------------"
+            + "\n-------------------------------------------"
+            + "\n| Notebook                                |"
+            + "\n-------------------------------------------"
             + "\nD - Description of clue"
             + "\nE - Exit";
     
     //code for displaying notebook menu when enough clues are accumilated to end game
     private final String ENDMENU = "\n"
-            + "\n-----------------------------------"
-            + "\n| Notebook                        |"
-            + "\n-----------------------------------"
+            + "\n-------------------------------------------"
+            + "\n| Notebook                                |"
+            + "\n-------------------------------------------"
             + "\nD - Description of clue"
             + "\nF - Finish Game"
             + "\nE - Exit";
@@ -37,7 +37,7 @@ public class NotebookView {
         do {
             
             //display inventory list
-            System.out.println("***List of items in notebook***");
+            System.out.println("\n***List of items in notebook***");
             
             if(DetectiveWizard.getPlayer().getNumberOfClue() >=7){
                 System.out.println(ENDMENU);
@@ -112,11 +112,11 @@ public class NotebookView {
     }
 
     private void description() {
-        System.out.println("*** description function called ***");
+        System.out.println("\n*** description function called ***");
     }
 
     private void finishGame() {
-        System.out.println("***finishGame function called***");
+        System.out.println("\n***finishGame function called***");
     }
     
 }

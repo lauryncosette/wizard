@@ -14,9 +14,9 @@ import java.util.Scanner;
 public class InventoryMenuView {
     //Code for displaying HelpMenu
     private final String MENU = "\n"
-            + "\n-----------------------------------"
-            + "\n| Inventory Menu                       |"
-            + "\n-----------------------------------"
+            + "\n-------------------------------------------"
+            + "\n| Inventory Menu                          |"
+            + "\n-------------------------------------------"
             + "\nB - View backpack"
             + "\nN - View notebook"
             + "\nE - Exit";
@@ -93,9 +93,9 @@ void displayMenu() {
     }
 
     private void viewBackpack() {
-        System.out.println("\n-----------------------------------"
-            + "\n| Backpack                        |"
-            + "\n-----------------------------------"
+        System.out.println("\n-------------------------------------------"
+            + "\n| Backpack                                |"
+            + "\n-------------------------------------------"
             + "\nE - Exit");
     }
 

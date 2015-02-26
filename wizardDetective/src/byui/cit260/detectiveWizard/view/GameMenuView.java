@@ -14,7 +14,9 @@ import java.util.Scanner;
 public class GameMenuView {
     
     private final String MENU = "\n"
-            + "\n------------------------"
+            + "\n-------------------------------------------"
+            + "\n| Game Menu                               |"
+            + "\n-------------------------------------------"
             + "\nI | Investigate"
             + "\nV | View Score"
             + "\nM | Main Inventory Menu"
