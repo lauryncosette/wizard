@@ -17,6 +17,7 @@ public class GameMenuView {
             + "\n------------------------"
             + "\nI | Investigate"
             + "\nV | View Score"
+            + "\nM | Main Inventory Menu"
             + "\nE | Exit";
            
 void displayMenu(){
@@ -69,6 +70,21 @@ private String getInput() {
 
   
     private void doAction(char selection) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        switch (selection){
+            //open inventory
+            case 'M':
+                this.inventoryMenu();
+                break;
+            //exit
+            case 'E':
+                break;
+            default:
+                System.out.println("\n*** Invalid selection *** Try again");
+        }
+    }
+    
+    private void inventoryMenu(){
+        InventoryMenuView inventoryMenu = new InventoryMenuView();
+        inventoryMenu.displayMenu();
     }
 }

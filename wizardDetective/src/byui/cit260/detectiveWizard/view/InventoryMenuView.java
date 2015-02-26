@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Cassandra
  */
-public class InventoryMenu {
+public class InventoryMenuView {
     //Code for displaying HelpMenu
     private final String MENU = "\n"
             + "\n-----------------------------------"
