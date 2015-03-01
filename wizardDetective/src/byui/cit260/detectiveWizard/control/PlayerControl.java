@@ -28,7 +28,7 @@ public class PlayerControl {
             }
             
             double answer = (killerHeight * -1 / distance) * distance + characterHeight;
-            return answer;
+            return 1;
             
         }
     
