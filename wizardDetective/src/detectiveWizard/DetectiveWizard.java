@@ -32,7 +32,7 @@ import byui.cit260.detectiveWizard.view.StartProgramView;
  *
  * @author Cassandra/Lauryn
  */
-public class DetectiveWizard {
+public class DetectiveWizard {    
     
     private static Game currentGame = null;
     private static Player player = null;
