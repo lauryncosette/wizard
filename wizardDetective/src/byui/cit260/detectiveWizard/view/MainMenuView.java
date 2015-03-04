@@ -5,26 +5,23 @@
  */
 package byui.cit260.detectiveWizard.view;
 
-import java.util.Scanner;
+public class MainMenuView extends View {
 
-
-public class MainMenuView extends View{
-
-    public MainMenuView(){
+    public MainMenuView() {
         super("\n"
-            + "\n-------------------------------------------"
-            + "\n| Main Menu                               |"
-            + "\n-------------------------------------------"
-            + "\nP - Play New Game"
-            + "\nS - Save Game"
-            + "\nL - Load Game"
-            + "\nH - Help"
-            + "\nE - Exit");
+                + "\n-------------------------------------------"
+                + "\n| Main Menu                               |"
+                + "\n-------------------------------------------"
+                + "\nP - Play New Game"
+                + "\nS - Save Game"
+                + "\nL - Load Game"
+                + "\nH - Help"
+                + "\nE - Exit");
     }
 
     private void doAction(char selection) {
-        
-        switch (selection){
+
+        switch (selection) {
             //create new game
             case 'P':
                 this.startNewGame();
@@ -68,10 +65,10 @@ public class MainMenuView extends View{
         System.out.println("*** startExistingGame function called ***");
     }
 
+    //what is this for???
     @Override
     public void doAction(String Value) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-}
 
+}
