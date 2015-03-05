@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package byui.cit260.detectiveWizard.view;
 
 public class MainMenuView extends View {
@@ -19,9 +15,10 @@ public class MainMenuView extends View {
                 + "\nE - Exit");
     }
 
-    private void doAction(char selection) {
-
-        switch (selection) {
+    @Override
+    public void doAction(String value) {
+            
+        switch(value.charAt(0)){
             //create new game
             case 'P':
                 this.startNewGame();
@@ -64,11 +61,4 @@ public class MainMenuView extends View {
     private void startExistingGame() {
         System.out.println("*** startExistingGame function called ***");
     }
-
-    //what is this for???
-    @Override
-    public void doAction(String Value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
 }

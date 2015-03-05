@@ -1,17 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package byui.cit260.detectiveWizard.view;
 
 import byui.cit260.detectiveWizard.ViewInterface;
 import java.util.Scanner;
+import static java.lang.Character.toUpperCase;
 
-/**
- *
- * @author Cassandra
- */
 public abstract class View implements ViewInterface{
     
     
@@ -25,7 +18,7 @@ public abstract class View implements ViewInterface{
     public void display() {
         
         String value;
-        //char selection = ' '; is replaced with value
+        //char value = ' ';is replaced with value
         do {
             
             //displays the MainMenu
@@ -33,8 +26,6 @@ public abstract class View implements ViewInterface{
             
             //get user's selection
             value = this.getInput();
-            //Get the first character of the string
-            //selection = input.charAt(0);
             
             //do action based on selection
             this.doAction(value);
@@ -60,6 +51,7 @@ public abstract class View implements ViewInterface{
             input = keyboard.nextLine();
             input = input.trim();
             
+            
             //if the input is invalid(may need help on this) - code is running to this point - when change to <2 code outputs invalid input
             if (input.length() < 1){
                 System.out.println("*** Invalid input *** input must not be blank");
@@ -82,6 +74,4 @@ public abstract class View implements ViewInterface{
     public void setPromptMessage(String promptMessage) {
         this.promptMessage = promptMessage;
     }
-    
-    
 }
