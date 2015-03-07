@@ -1,4 +1,3 @@
-
 package byui.cit260.detectiveWizard.view;
 
 public class MainMenuView extends View {
@@ -17,8 +16,8 @@ public class MainMenuView extends View {
 
     @Override
     public void doAction(String value) {
-            
-        switch(value.charAt(0)){
+
+        switch (value.charAt(0)) {
             //create new game
             case 'P':
                 this.startNewGame();
@@ -46,12 +45,12 @@ public class MainMenuView extends View {
         System.out.println("*** startNewGame function called ***");
         //Start new game function will create new player and will then call the game menu
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.display();
     }
 
     private void displayHelpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayMenu();
+        helpMenu.display();
     }
 
     private void saveGame() {

@@ -1,18 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package byui.cit260.detectiveWizard.view;
 
 import detectiveWizard.DetectiveWizard;
 import java.util.Scanner;
 
-/**
- *
- * @author Mathew
- */
-public class NotebookView {
+public class NotebookView{
     
     //Code for displaying notebookMenu when not enough clues are accumilated
     private final String MENU = "\n"
@@ -31,6 +23,7 @@ public class NotebookView {
             + "\nF - Finish Game"
             + "\nE - Exit";
     
+
     void displayMenu() {
         
         char selection = ' ';
@@ -59,42 +52,48 @@ public class NotebookView {
         //an selection is not "Exit"
         while (selection != 'E');
     }
-
-    //get input from user for desired Menu Item
-    private String getInput() {
+    
+    public String getInput() {
         //indicates if input has been retrieved
         boolean valid = false;
         String input = null;
         //keyboard input stream
         Scanner keyboard = new Scanner(System.in);
-        
+
         //while a valid value has has not been retrieved
-        while (!valid){
+        while (!valid) {
             //prompt for the player's input
             System.out.println("Enter menu selection below:");
-            
+
             //get the input from the keyboard and trim of the blanks
             input = keyboard.nextLine();
             input = input.trim();
-            
+
             //if the input is invalid(may need help on this) - code is running to this point - when change to <2 code outputs invalid input
-            if (input.length() < 1){
-                System.out.println("Invalid input = input must not be blank");
+            if (input.length() < 1) {
+                System.out.println("*** Invalid input *** input must not be blank");
                 //and repeat again
                 continue;
-                
+
             }
             //exit the repetition
-            break;   
-        
+            break;
+
         }
         //return the input
         return input;
     }
 
-    private void doAction(char selection) {
-        
-        switch (selection){
+    private void description() {
+        System.out.println("\n*** description function called ***");
+    }
+
+    private void finishGame() {
+        System.out.println("\n***finishGame function called***");
+    }
+
+    public void doAction(char choice) {
+        switch (choice){
             //get item description
             case 'D':
                 this.description();
@@ -110,13 +109,4 @@ public class NotebookView {
                 System.out.println("\n*** Invalid selection *** Try again");
         }
     }
-
-    private void description() {
-        System.out.println("\n*** description function called ***");
-    }
-
-    private void finishGame() {
-        System.out.println("\n***finishGame function called***");
-    }
-    
 }
