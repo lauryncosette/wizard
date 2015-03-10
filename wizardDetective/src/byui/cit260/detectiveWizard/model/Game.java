@@ -8,35 +8,34 @@ package byui.cit260.detectiveWizard.model;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
+
 /**
  *
  * @author Cassandra
  */
-public class Game implements Serializable{
-    
+public class Game implements Serializable {
+
     //class instance variables
     private int score;
-    private Date date;  
+    private Date date;
     private Map map;
-    private Character[] character;
-    private Player player; 
+    private Characters[] character;
+    private Player player;
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
 
     public Game() {
         date = new Date();
     }
-    
+
     //toString()
     //alt-fn-insert (Source-Insert Code), toString(), (select all) generate
-
     @Override
     public String toString() {
         return "Game{" + "score=" + score + ", date=" + date + '}';
     }
-    
+
     //equals(), hashCode()
     //alt-fn-insert (Source-Insert Code), equals() and hashCode(), (select all)generate
-
     @Override
     public int hashCode() {
         int hash = 7;
@@ -62,24 +61,24 @@ public class Game implements Serializable{
         }
         return true;
     }
-    
-    public int getScore(){
+
+    public int getScore() {
         return score;
     }
-    
-    public Date getDate(){
+
+    public Date getDate() {
         return date;
     }
-    
-    public void setScore(int score){
+
+    public void setScore(int score) {
         this.score = score;
     }
-    
-    public void setDate(Date date){
+
+    public void setDate(Date date) {
         this.date = date;
     }
-    
-      public Map getMap() {
+
+    public Map getMap() {
         return map;
     }
 
@@ -87,11 +86,11 @@ public class Game implements Serializable{
         this.map = map;
     }
 
-    public Character[] getCharacter() {
+    public Characters[] getCharacter() {
         return character;
     }
 
-    public void setCharacter(Character[] character) {
+    public void setCharacter(Characters[] character) {
         this.character = character;
     }
 
@@ -103,4 +102,3 @@ public class Game implements Serializable{
         this.player = player;
     }
 }
-

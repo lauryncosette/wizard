@@ -8,7 +8,7 @@ package detectiveWizard;
 //for each program you need to be sure to import it from the java file to this file because this is the only file that is read
 //Model layer imports
 import byui.cit260.detectiveWizard.model.Player;
-import byui.cit260.detectiveWizard.model.Character;
+import byui.cit260.detectiveWizard.model.Characters;
 import byui.cit260.detectiveWizard.model.Clue;
 import byui.cit260.detectiveWizard.model.Game;
 import byui.cit260.detectiveWizard.model.InventoryItems;
