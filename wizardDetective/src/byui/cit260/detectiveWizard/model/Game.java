@@ -16,8 +16,10 @@ public class Game implements Serializable{
     
     //class instance variables
     private int score;
-    private Date date;
-    
+    private Date date;  
+    private Map map;
+    private Character[] character;
+    private Player player; 
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
 
     public Game() {
@@ -76,4 +78,29 @@ public class Game implements Serializable{
     public void setDate(Date date){
         this.date = date;
     }
+    
+      public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public Character[] getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Character[] character) {
+        this.character = character;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
 }
+
