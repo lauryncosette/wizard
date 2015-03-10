@@ -12,15 +12,22 @@ import java.util.Objects;
  *
  * @author Cassandra
  */
-public class Character implements Serializable{
+public enum Character implements Serializable{
     
-    //class instance
-    private String name;
-    private String role;
-    private double height;
+    Tim("He is your partner."),
+    Clyde("He is the janitor for the hotel."),
+    Gaston("He is the matrede of the hotel."),
+    Chief("Police chief."),
+    Jason("This bell boy is the one who found the body."),
+    Stevie("He is the victim of this crime."),;
+    
+    private final String role;
+    private final Double height;
     
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
-    public Character() {
+    public Character(String role) {
+        this.role = role;
+        height = new Double(6);
     }
     
     //toString()
@@ -62,26 +69,14 @@ public class Character implements Serializable{
         return true;
     }
         
-    public String getName(){
-        return name;
-    }
+
     
     public String getRole(){
         return role;
     }
     
-    public double getHeight(){
+    public Double getHeight(){
         return height;
     }
-    public void setName(String name){
-        this.name = name;
-    }
-    
-    public void setRole(String role){
-        this.role = role;
-    }
-    
-    public void setHeight(double height){
-        this.height = height;
-    }
-}
+
+
