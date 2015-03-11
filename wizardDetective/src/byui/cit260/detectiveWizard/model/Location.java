@@ -7,15 +7,15 @@ public enum Location implements Serializable{
     
     Kitchen(),
     CrimeScene(),
-    MainLobby(),
-    JanitorialOffice(),
+    Bathroom(),
+    Bedroom(),
+    Lobby(),
+    JanitorOffice(),
     JanitorCloset(),
     WineCellar(),
     BanquetHall(),
     LaundryRoom(),
-    Elevator(),
     GuestRoomEmpty(),
-    Lounge(),
     ManagerOffice();
     
     //class instances
