@@ -2,13 +2,9 @@ package byui.cit260.detectiveWizard.model;
 
 import java.io.Serializable;
 
-/**
- *
- * @author Cassandra
- */
 public enum Characters implements Serializable {
 
-    //roles
+    //roles, height, name
     Tim("He is your partner.", 6, "Tim"),
     Clyde("He is the janitor for the hotel.", 6, "Clyde"),
     Gaston("He is the matrede of the hotel.", 6, "Gaston"),
@@ -19,6 +15,14 @@ public enum Characters implements Serializable {
     private final String role;
     private final double height;
     private final String name;
+    //rumor is currently set up as a single array list.
+    //We need to decide if we want to do a double array list String[number of questions][2] rumors.
+    //We can remove the model layer class rumor and just put the array list above.
+    //example
+    //Tim(role, height, name, {{question 1, answer 1}{question 2, answer 2}}
+    //private final String[] rumors; would need to be changed to private final String[][] rumors;
+    //in constructor would need to add (String[][] rumors)
+    //this.rumors = new String [number of questions][2];
     private final String[] rumors;
 
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
@@ -30,15 +34,6 @@ public enum Characters implements Serializable {
         this.rumors = new String[3];
     }
 
-    //toString()
-    //alt-fn-insert (Source-Insert Code), toString(), (select all) generate
-    @Override
-    public String toString() {
-        return "Character{" + "name=" + name + ", role=" + role + ", height=" + height + '}';
-    }
-
-    //equals(), hashCode()
-    //alt-fn-insert (Source-Insert Code), equals() and hashCode(), (select all)generate - not valid in enum
     public String getRole() {
         return role;
     }
@@ -53,7 +48,5 @@ public enum Characters implements Serializable {
 
     public String[] getRumors() {
         return rumors;
-    }
-    
-    
+    }   
 }
