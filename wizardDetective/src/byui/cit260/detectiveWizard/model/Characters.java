@@ -14,10 +14,10 @@ public enum Characters implements Serializable {
 
     private final String role;
     private final double height;
-    private final String[] rumors;
+    private final String[] rumors; //this needs to be changed to an array or array list
     //Do we need to have these
     //private final Game game;
-    //private final String[] scenes; the character can be in multiple scenes
+    //private final String[] scenes; is this to be an array or array list
 
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
     Characters(String role, double height) {

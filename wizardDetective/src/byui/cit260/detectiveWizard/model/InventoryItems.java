@@ -16,8 +16,11 @@ public class InventoryItems implements Serializable{
     //class instance variables
     private String description;
     private String itemName;
+    //do we need these?
+    //private rumor array or array list
+    //private clue array or array list
     //these inherit the information and items in the inventoryitem
-    //Would they be written as array lists?
+    //Would they be written as array lists or not written at all?
     //nonphysicalinventory array list
     //physicalinventory array list
 
