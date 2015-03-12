@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public enum Characters implements Serializable {
 
-    //roles, height, name
+    //enum list
     Tim("He is your partner.", 6),
     Clyde("He is the janitor for the hotel.", 6),
     Gaston("He is the matrede of the hotel.", 6),
@@ -12,20 +12,23 @@ public enum Characters implements Serializable {
     Jason("This bell boy is the one who found the body.", 6),
     Stevie("He is the victim of this crime.", 6),;
 
+    //class instances
     private final String role;
     private final double height;
+    //class relations
     private final String[] rumors; //this needs to be changed to an array or array list
     //Do we need to have these
     //private final Game game;
     //private final String[] scenes; is this to be an array or array list
 
-    //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
+    //constructor
     Characters(String role, double height) {
         this.role = role;
         this.height = height;
         this.rumors = new String[3];
     }
-
+    
+    //getter
     public String getRole() {
         return role;
     }

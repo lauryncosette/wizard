@@ -10,11 +10,12 @@ public class Game implements Serializable {
     //class instance variables
     private int score;
     private Date date;
+    //class relations
     private Map map;
     private Characters[] character;
     private Player player;
+    
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
-
     public Game() {
         date = new Date();
     }

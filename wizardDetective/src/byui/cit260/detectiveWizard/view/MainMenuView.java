@@ -1,5 +1,8 @@
 package byui.cit260.detectiveWizard.view;
 
+import byui.cit260.detectiveWizard.control.GameControl;
+import detectiveWizard.DetectiveWizard;
+
 public class MainMenuView extends View {
 
     public MainMenuView() {
@@ -42,8 +45,9 @@ public class MainMenuView extends View {
     }
 
     private void startNewGame() {
-        System.out.println("*** startNewGame function called ***");
-        //Start new game function will create new player and will then call the game menu
+        //create new game
+        GameControl.createNewGame(DetectiveWizard.getPlayer());
+        //display game menu
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
     }
