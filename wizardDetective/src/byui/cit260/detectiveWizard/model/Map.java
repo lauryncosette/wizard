@@ -6,6 +6,8 @@ import java.io.Serializable;
 public class Map implements Serializable{
     
     private Location[][] locations;
+    //do we need this
+    //private final Game game;
     
     public Location[][] getLocations(){
         return locations;
@@ -14,8 +16,4 @@ public class Map implements Serializable{
     public void setLocation(Location[][] locations){
         this.locations = locations;
     }
-    
-    //show character location - array list - characters can be in one location at a time, but have the ability to move
-    
-    //show rooms - array list
 }

@@ -13,6 +13,9 @@ public class Clue implements Serializable{
     private String itemType;
     private String itemName;
     private String itemDescription;
+    //do we need to have these?
+    //private Scene scene;
+    //private InventoryIten inventory;
 
     public Clue() {
     }

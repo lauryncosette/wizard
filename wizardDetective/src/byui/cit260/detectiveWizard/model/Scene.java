@@ -1,21 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package byui.cit260.detectiveWizard.model;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-/**
- *
- * @author Cassandra
- */
 public class Scene implements Serializable{
     
     //class instances
     private String description;
+    //do we need this?
+    //private Location location; there can only be one scene at a location at a time
+    //private Characters[] character;
+    //private Clue clue;
     
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
     public Scene() {

@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package byui.cit260.detectiveWizard.model;
 
 import java.io.Serializable;
 import java.util.Objects;
-/**
- *
- * @author Cassandra
- */
+
 public class Player implements Serializable{
     
     //class instance variables
@@ -18,6 +11,9 @@ public class Player implements Serializable{
     private String role;
     private int score;
     private int numberOfClue = 7;
+    //do we need this?
+    //private Game game; would this be an array because the player can play many games?
+    //private InventoryItems inventoryItems; would this be an array because the play can carry multiple items?
     
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
     public Player() {

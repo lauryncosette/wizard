@@ -16,6 +16,8 @@ public class InventoryItems implements Serializable{
     //class instance variables
     private String description;
     private String itemName;
+    //these inherit the information and items in the inventoryitem
+    //Would they be written as array lists?
     //nonphysicalinventory array list
     //physicalinventory array list
 

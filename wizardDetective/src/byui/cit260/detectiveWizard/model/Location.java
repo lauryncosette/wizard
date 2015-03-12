@@ -9,7 +9,10 @@ public class Location implements Serializable{
     
     //class instances
     private Point coordinate;
-    private Clue clue;
+    private Clue clue; //the clue is actually associated with the scene.  Do we need to remove it then?
+    //do we need to have these?
+    //private Characters[] character;
+    //private Scene scene; there is only one scene at a location
     
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
     public Location() {
