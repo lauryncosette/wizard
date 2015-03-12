@@ -5,14 +5,14 @@ import java.io.Serializable;
 
 public class Map implements Serializable{
     
-    private Location[] location;
+    private Location[][] locations;
     
-    public Location[] getLocation(){
-        return location;
+    public Location[][] getLocations(){
+        return locations;
     }
     
-    public void setLocation(Location[] location){
-        this.location = location;
+    public void setLocation(Location[][] locations){
+        this.locations = locations;
     }
     
     //show character location - array list - characters can be in one location at a time, but have the ability to move

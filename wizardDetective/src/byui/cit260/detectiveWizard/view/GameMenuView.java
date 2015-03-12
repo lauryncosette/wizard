@@ -57,7 +57,6 @@ public class GameMenuView extends View {
     }
 
     private void viewMap() {
-        MapView map = new MapView();
-        map.display();
+        System.out.println("Shows map");
     }
 }

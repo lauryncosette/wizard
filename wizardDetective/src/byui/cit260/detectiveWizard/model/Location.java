@@ -1,35 +1,65 @@
 
 package byui.cit260.detectiveWizard.model;
 
+import java.awt.Point;
 import java.io.Serializable;
+import java.util.Objects;
 
-public enum Location implements Serializable{
-    
-    Kitchen(),
-    CrimeScene(),
-    Bathroom(),
-    Bedroom(),
-    Lobby(),
-    JanitorOffice(),
-    JanitorCloset(),
-    WineCellar(),
-    BanquetHall(),
-    LaundryRoom(),
-    GuestRoomEmpty(),
-    ManagerOffice();
+public class Location implements Serializable{
     
     //class instances
-    private String coordinate;
+    private Point coordinate;
+    private Clue clue;
     
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
-    Location() {
+    public Location() {
+    }
+
+    @Override
+    public String toString() {
+        return "Location{" + "coordinate=" + coordinate + ", clue=" + clue + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 37 * hash + Objects.hashCode(this.coordinate);
+        hash = 37 * hash + Objects.hashCode(this.clue);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Location other = (Location) obj;
+        if (!Objects.equals(this.coordinate, other.coordinate)) {
+            return false;
+        }
+        if (!Objects.equals(this.clue, other.clue)) {
+            return false;
+        }
+        return true;
     }
     
-    public String getCoordinate(){
+    public Point getCoordinate(){
         return coordinate;
     }
-    
-    public void setCoordinate(String coordinate){
+
+    public Clue getClue() {
+        return clue;
+    }
+
+    public void setCoordinate(Point coordinate) {
         this.coordinate = coordinate;
     }
+
+    public void setClue(Clue clue) {
+        this.clue = clue;
+    }
+    
 }
