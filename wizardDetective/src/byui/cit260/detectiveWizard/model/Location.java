@@ -1,15 +1,17 @@
 
 package byui.cit260.detectiveWizard.model;
 
-import java.awt.Point;
 import java.io.Serializable;
-import java.util.Objects;
 
 public class Location implements Serializable{
     
     //class instances
-    private Point coordinate;
+    private int row;
+    private int column;
     private Clue clue; //the clue is actually associated with the scene.  Do we need to remove it then?
+    private boolean visited;
+    private Scene scene;
+    private Characters[] characters;
     //do we need to have these?
     //private Characters[] character;
     //private Scene scene; there is only one scene at a location
@@ -20,14 +22,15 @@ public class Location implements Serializable{
 
     @Override
     public String toString() {
-        return "Location{" + "coordinate=" + coordinate + ", clue=" + clue + '}';
+        return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + '}';
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 37 * hash + Objects.hashCode(this.coordinate);
-        hash = 37 * hash + Objects.hashCode(this.clue);
+        int hash = 5;
+        hash = 97 * hash + this.row;
+        hash = 97 * hash + this.column;
+        hash = 97 * hash + (this.visited ? 1 : 0);
         return hash;
     }
 
@@ -40,29 +43,63 @@ public class Location implements Serializable{
             return false;
         }
         final Location other = (Location) obj;
-        if (!Objects.equals(this.coordinate, other.coordinate)) {
+        if (this.row != other.row) {
             return false;
         }
-        if (!Objects.equals(this.clue, other.clue)) {
+        if (this.column != other.column) {
+            return false;
+        }
+        if (this.visited != other.visited) {
             return false;
         }
         return true;
     }
-    
-    public Point getCoordinate(){
-        return coordinate;
+
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public void setColumn(int column) {
+        this.column = column;
     }
 
     public Clue getClue() {
         return clue;
     }
 
-    public void setCoordinate(Point coordinate) {
-        this.coordinate = coordinate;
-    }
-
     public void setClue(Clue clue) {
         this.clue = clue;
     }
-    
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+
+    public Characters[] getCharacters() {
+        return characters;
+    }
+
+    public void setCharacters(Characters[] characters) {
+        this.characters = characters;
+    }
 }

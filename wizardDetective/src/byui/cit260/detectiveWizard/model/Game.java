@@ -14,6 +14,7 @@ public class Game implements Serializable {
     private Map map;
     private Characters[] character;
     private Player player;
+    private InventoryItem[] inventoryList;
     
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
     public Game() {
@@ -96,6 +97,6 @@ public class Game implements Serializable {
     }
 
     public void setInventoryItem(InventoryItem[] inventoryList) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.inventoryList = inventoryList;
     }
 }
