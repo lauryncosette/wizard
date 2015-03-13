@@ -2,9 +2,8 @@
 package byui.cit260.detectiveWizard.control;
 
 import byui.cit260.detectiveWizard.model.Game;
+import byui.cit260.detectiveWizard.model.InventoryItem;
 import byui.cit260.detectiveWizard.model.Map;
-import byui.cit260.detectiveWizard.model.PhysicalInventory;
-import byui.cit260.detectiveWizard.model.NonphysicalInventory;
 import byui.cit260.detectiveWizard.model.Player;
 import detectiveWizard.DetectiveWizard;
 
@@ -21,11 +20,8 @@ public class GameControl {
         game.setPlayer(player);
         
         //create inventory list and save
-        PhysicalInventory[] physicalInventoryList = GameControl.createPhysicalInventoryList();
-        game.setPhysicalInventory(physicalInventoryList);
-        
-        NonphysicalInventory[] nonphysicalInventoryList = GameControl.createNonpysicalInventoryList();
-        game.setNonpysicalInventoryList(nonphysicalInventoryList);
+        InventoryItem[] inventoryList = GameControl.createInventoryList();
+        game.setInventoryItem(inventoryList);
         
         //create and initialize new map
         Map map = MapControl.createMap();
@@ -34,14 +30,7 @@ public class GameControl {
         MapControl.moveActorsToStartingLocation(map);
     }
 
-    public static PhysicalInventory[] createPhysicalInventoryList() {
-        
-        System.out.println("*** called createPhysicalInventoryList() in GameControl ***");
-        return null;
-    }
-
-    public static NonphysicalInventory[] createNonpysicalInventoryList() {
-        System.out.println("*** called createNonphysicalInventoryList() in GameControl ***");
-        return null;
+    private static InventoryItem[] createInventoryList() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

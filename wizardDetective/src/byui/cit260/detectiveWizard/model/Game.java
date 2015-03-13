@@ -95,11 +95,7 @@ public class Game implements Serializable {
         this.player = player;
     }
 
-    public void setPhysicalInventory(PhysicalInventory[] physicalInventoryList) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setNonpysicalInventoryList(NonphysicalInventory[] nonphysicalInventoryList) {
+    public void setInventoryItem(InventoryItem[] inventoryList) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
