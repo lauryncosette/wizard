@@ -1,4 +1,4 @@
-/* --- Unused class ---
+
 package byui.cit260.detectiveWizard.model;
 
 import java.io.Serializable;
@@ -59,8 +59,5 @@ public class InventoryItem implements Serializable{
 
     public void setItemName(String itemName) {
         this.itemName = itemName;
-    }
-    
-    
+    }   
 }
-*/

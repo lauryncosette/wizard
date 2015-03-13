@@ -1,28 +1,47 @@
 
 package byui.cit260.detectiveWizard.model;
 
-import java.io.Serializable;
+import java.util.Objects;
 
-public enum NonphysicalInventory implements Serializable {
-    
-    Blood;
+public class NonphysicalInventory extends InventoryItem {
     
     private String ItemType;
-    private String description;
-    private String itemName;
     
     NonphysicalInventory() {
+    }
+
+    @Override
+    public String toString() {
+        return "NonphysicalInventory{" + "ItemType=" + ItemType + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 53 * hash + Objects.hashCode(this.ItemType);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final NonphysicalInventory other = (NonphysicalInventory) obj;
+        if (!Objects.equals(this.ItemType, other.ItemType)) {
+            return false;
+        }
+        return true;
     }
 
     public String getItemType() {
         return ItemType;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public String getItemName() {
-        return itemName;
+    public void setItemType(String ItemType) {
+        this.ItemType = ItemType;
     }
 }

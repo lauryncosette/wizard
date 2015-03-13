@@ -34,12 +34,13 @@ public class GameControl {
         MapControl.moveActorsToStartingLocation(map);
     }
 
-    private static PhysicalInventory[] createPhysicalInventoryList() {
+    public static PhysicalInventory[] createPhysicalInventoryList() {
+        
         System.out.println("*** called createPhysicalInventoryList() in GameControl ***");
         return null;
     }
 
-    private static NonphysicalInventory[] createNonpysicalInventoryList() {
+    public static NonphysicalInventory[] createNonpysicalInventoryList() {
         System.out.println("*** called createNonphysicalInventoryList() in GameControl ***");
         return null;
     }
