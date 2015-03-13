@@ -9,7 +9,7 @@ import detectiveWizard.DetectiveWizard;
 
 public class GameControl {
     
-    public static void createNewGame(Player player) throws MapControl.MapControlException{
+public static void createNewGame(Player player){
         
         //create new game
         Game game = new Game();
@@ -30,7 +30,8 @@ public class GameControl {
         MapControl.moveActorsToStartingLocation(map);
     }
 
-    private static InventoryItem[] createInventoryList() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static InventoryItem[] createInventoryList() {
+        System.out.println("*** called createInventoryList() ***");
+        return null;
     }
 }
