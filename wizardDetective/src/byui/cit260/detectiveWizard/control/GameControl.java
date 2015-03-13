@@ -74,4 +74,13 @@ public static void createNewGame(Player player){
         
         return inventory;
     }
+    
+    public enum Item{
+        blood,
+        hair,
+        pentagram,
+        key,
+        murderWeapon,
+        caseFile;
+    }
 }
