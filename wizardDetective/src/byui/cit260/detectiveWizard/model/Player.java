@@ -12,8 +12,7 @@ public class Player implements Serializable{
     private int score;
     private int numberOfClue = 7;
     //class relations
-    //private InventoryItems[] inventory; //this is an array list - hw.assignment9.pg9 (does this need to be in game class)
-    //do we need these?
+    //inventory item array
     //private Game game; would this be an array or array list
     
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate

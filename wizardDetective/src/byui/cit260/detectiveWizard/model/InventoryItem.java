@@ -1,30 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/* --- Unused class ---
 package byui.cit260.detectiveWizard.model;
 
 import java.io.Serializable;
 import java.util.Objects;
-/**
- *
- * @author lauryn
- */
-public class InventoryItems implements Serializable{
+
+public class InventoryItem implements Serializable{
     
-    //class instance variables
     private String description;
     private String itemName;
-    //do we need these?
-    //private rumor array or array list
-    //private clue array or array list
-    //these inherit the information and items in the inventoryitem
-    //Would they be written as array lists or not written at all?
-    //nonphysicalinventory array list
-    //physicalinventory array list
 
-    public InventoryItems() {
+    public InventoryItem() {
     }
 
     @Override
@@ -48,7 +33,7 @@ public class InventoryItems implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final InventoryItems other = (InventoryItems) obj;
+        final InventoryItem other = (InventoryItem) obj;
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
@@ -78,3 +63,4 @@ public class InventoryItems implements Serializable{
     
     
 }
+*/
