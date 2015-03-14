@@ -8,6 +8,8 @@ public class Scene implements Serializable{
     
     //class instances
     private String description;
+    private String mapSymbol;
+    private boolean blocked;
     //do we need this?
     //private Location location; there can only be one scene at a location at a time
     //private Characters[] character;
@@ -21,15 +23,18 @@ public class Scene implements Serializable{
     //alt-fn-insert (Source-Insert Code), toString(), (select all) generate
     @Override
     public String toString() {
-        return "Scene{" + "description=" + description + '}';
+        return "Scene{" + "description=" + description + "mapSymbol" + mapSymbol + "blocked" + blocked + '}';
     }
     
     //equals(), hashCode()
     //alt-fn-insert (Source-Insert Code), equals() and hashCode(), (select all)generate
+
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 37 * hash + Objects.hashCode(this.description);
+        int hash = 3;
+        hash = 97 * hash + Objects.hashCode(this.description);
+        hash = 97 * hash + Objects.hashCode(this.mapSymbol);
+        hash = 97 * hash + (this.blocked ? 1 : 0);
         return hash;
     }
 
@@ -45,6 +50,12 @@ public class Scene implements Serializable{
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
+        if (!Objects.equals(this.mapSymbol, other.mapSymbol)) {
+            return false;
+        }
+        if (this.blocked != other.blocked) {
+            return false;
+        }
         return true;
     }
     
@@ -54,5 +65,21 @@ public class Scene implements Serializable{
     
     public void setDescription(String description){
         this.description = description;
+    }
+
+    public String getMapSymbol() {
+        return mapSymbol;
+    }
+
+    public void setMapSymbol(String mapSymbol) {
+        this.mapSymbol = mapSymbol;
+    }
+
+    public boolean isBlocked() {
+        return blocked;
+    }
+
+    public void setBlocked(boolean blocked) {
+        this.blocked = blocked;
     }
 }
