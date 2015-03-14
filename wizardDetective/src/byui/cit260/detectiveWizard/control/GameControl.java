@@ -5,7 +5,6 @@ import byui.cit260.detectiveWizard.model.Game;
 import byui.cit260.detectiveWizard.model.InventoryItem;
 import byui.cit260.detectiveWizard.model.Map;
 import byui.cit260.detectiveWizard.model.Player;
-import com.sun.org.apache.bcel.internal.Constants;
 import detectiveWizard.DetectiveWizard;
 
 public class GameControl {
@@ -73,6 +72,13 @@ public static void createNewGame(Player player){
         inventory[Item.caseFile.ordinal()] = caseFile;
         
         return inventory;
+    }
+
+    private static class Constants {
+        private static int NUMBER_OF_INVENTORY_ITEMS;
+
+        public Constants() { 
+        }
     }
     
     public enum Item{

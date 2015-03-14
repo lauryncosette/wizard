@@ -5,6 +5,7 @@ import java.io.Serializable;
 
 public class Location implements Serializable{
     
+    
     //class instances
     private int row;
     private int column;
