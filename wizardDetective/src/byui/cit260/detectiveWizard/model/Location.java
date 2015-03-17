@@ -3,6 +3,7 @@ package byui.cit260.detectiveWizard.model;
 
 import java.io.Serializable;
 
+//needs to be an enum?
 public class Location implements Serializable{
     
     

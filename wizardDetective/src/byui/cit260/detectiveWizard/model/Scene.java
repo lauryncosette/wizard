@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.util.Objects;
 import javax.swing.ImageIcon;
 
+//needs to be an enum?
 public class Scene implements Serializable{
     
     //class instances

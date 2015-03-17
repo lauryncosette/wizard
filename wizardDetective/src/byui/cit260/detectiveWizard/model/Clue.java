@@ -7,6 +7,7 @@ import java.util.Objects;
  *
  * @author lauryn
  */
+
 public class Clue implements Serializable{
   
     // class instance variables
@@ -15,7 +16,7 @@ public class Clue implements Serializable{
     private String itemDescription;
     //do we need to have these?
     //private Scene scene;
-    //private InventoryIten inventory;
+    //private InventoryItem inventory;
 
     public Clue() {
     }

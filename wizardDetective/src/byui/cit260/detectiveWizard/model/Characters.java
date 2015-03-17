@@ -7,10 +7,13 @@ public enum Characters implements Serializable {
     //enum list
     Tim("He is your partner.", 6),
     Clyde("He is the janitor for the hotel.", 6),
-    Gaston("He is the matrede of the hotel.", 6),
+    Gaston("He is the matrede of the hotel.", 6.7),
     Chief("Police chief.", 6),
     Jason("This bell boy is the one who found the body.", 6),
-    Stevie("He is the victim of this crime.", 6),;
+    Stevie("He is the victim of this crime.", 6),
+    Waitress("Works in the dinning room.", 6),
+    Maid("Cleans the guest rooms.", 6),
+    Cook("Works the dinner shift and begins perparations for breakfast.", 6);
 
     //class instances
     private final String role;

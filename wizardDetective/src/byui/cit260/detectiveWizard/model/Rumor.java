@@ -8,6 +8,8 @@ import java.util.Objects;
  *
  * @author lauryn
  */
+
+//neds to be an enum?
 public class Rumor implements Serializable {
 
     //because some rumors/clues are associated with the character - should there be some clues written in for the character?
