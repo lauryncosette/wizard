@@ -2,6 +2,7 @@
 package byui.cit260.detectiveWizard.control;
 
 import byui.cit260.detectiveWizard.model.Game;
+import byui.cit260.detectiveWizard.model.Location;
 import byui.cit260.detectiveWizard.model.Map;
 import byui.cit260.detectiveWizard.model.Scene;
 import detectiveWizard.DetectiveWizard;
@@ -82,7 +83,7 @@ public class MapControl {
         finish;
     }
     private static void assignScenesToLocations(Map map, Scene[] scenes) {
-        Location[][] locations = map.getlocations();
+        Location[][] locations = map.getLocations();
         
         //start point
         locations[0][0].setScene(scenes[SceneType.start.ordinal()]);
