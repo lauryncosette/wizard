@@ -6,6 +6,7 @@ import byui.cit260.detectiveWizard.model.Map;
 import byui.cit260.detectiveWizard.model.Scene;
 import detectiveWizard.DetectiveWizard;
 import java.awt.image.BufferedImage;
+import javax.swing.ImageIcon;
 
 public class MapControl {
 
@@ -26,7 +27,7 @@ public class MapControl {
         System.out.println("*** called moveActorsToStartingLocation() ***");
     }  
 
-    private static Scene[] createScenes() throws MapControlException {
+    private static Scene[] createScenes() {
         
         BufferedImage image = null;
         
@@ -45,7 +46,7 @@ public class MapControl {
         ImageIcon startingSceneImage = MapControl.getImage(startingScene,
                 "/byui.cit260.detectiveWizard/images/finish.jpg");
         startingScene.setIcon(startingSceneImage);
-        scenes[SceneType.start.ordinal() = startingScene];
+        scenes[SceneType.start.ordinal()] = startingScene;
         
         Scene failedScene = new Scene();
         failedScene.setDescription(
@@ -70,12 +71,17 @@ public class MapControl {
         return scenes;
     }
 
+    private static ImageIcon getImage(Scene startingScene, String byuicit260detectiveWizardimagesfinishjpg) {
+        System.out.println("*** function getImage ***");
+        return null;
+    }
+
     public enum SceneType{
         start,
         failed,
         finish;
     }
     private static void assignScenesToLocations(Map map, Scene[] scenes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("*** function assignScenesToLocations ***");
     }
 }

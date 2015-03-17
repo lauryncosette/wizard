@@ -3,6 +3,7 @@ package byui.cit260.detectiveWizard.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import javax.swing.ImageIcon;
 
 public class Scene implements Serializable{
     
@@ -81,5 +82,8 @@ public class Scene implements Serializable{
 
     public void setBlocked(boolean blocked) {
         this.blocked = blocked;
+    }
+
+    public void setIcon(ImageIcon startingSceneImage) {
     }
 }
