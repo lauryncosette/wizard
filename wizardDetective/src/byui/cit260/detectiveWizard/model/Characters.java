@@ -13,7 +13,8 @@ public enum Characters implements Serializable {
     Stevie("He is the victim of this crime.", 6),
     Waitress("Works in the dinning room.", 6),
     Maid("Cleans the guest rooms.", 6),
-    Cook("Works the dinner shift and begins perparations for breakfast.", 6);
+    Cook("Works the dinner shift and begins perparations for breakfast.", 6),
+    Guest("Staying at the hotel.  Doesn't know about the murder.", 6);
 
     //class instances
     private final String role;
