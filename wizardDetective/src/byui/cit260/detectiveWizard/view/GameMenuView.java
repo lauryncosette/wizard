@@ -33,7 +33,7 @@ public class GameMenuView extends View {
                 this.inventoryMenu();
                 break;
             case 'N':
-                this.viewMap();
+                this.displayMap();
                 break;
             //exit
             case 'E':
@@ -56,7 +56,7 @@ public class GameMenuView extends View {
         System.out.println("Show list of top scores");
     }
 
-    private void viewMap() {
+    private void displayMap() {
         System.out.println("Shows map");
     }
 }

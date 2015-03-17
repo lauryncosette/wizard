@@ -82,6 +82,9 @@ public class MapControl {
         finish;
     }
     private static void assignScenesToLocations(Map map, Scene[] scenes) {
-        System.out.println("*** function assignScenesToLocations ***");
+        Location[][] locations = map.getlocations();
+        
+        //start point
+        locations[0][0].setScene(scenes[SceneType.start.ordinal()]);
     }
 }
