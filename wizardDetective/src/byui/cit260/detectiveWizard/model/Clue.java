@@ -10,6 +10,7 @@ import java.util.Objects;
 
 public class Clue implements Serializable{
   
+    
     // class instance variables
     private String itemType;
     private String itemName;

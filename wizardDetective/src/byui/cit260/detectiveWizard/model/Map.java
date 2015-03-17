@@ -29,7 +29,7 @@ public class Map implements Serializable{
                 location.setRow(row);
                 location.setVisited(false);
                 
-                location[row][column] = location;
+                locations[row][column] = location;
             }
         }
     }
