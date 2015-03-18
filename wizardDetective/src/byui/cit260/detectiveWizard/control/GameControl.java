@@ -74,6 +74,11 @@ public static void createNewGame(Player player){
         return inventory;
     }
 
+    public static InventoryItem[] getSortedInventoryList() {
+        System.out.println("\n*** getSortedInventoryList() stub function called***");
+        return null;
+    }
+
     private static class Constants {
         private static int NUMBER_OF_INVENTORY_ITEMS;
 

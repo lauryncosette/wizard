@@ -30,7 +30,7 @@ public class MapControl {
         System.out.println("*** called moveActorsToStartingLocation() ***");
     }  
 
-    private static Scene[] createScenes() {
+    private static Scene[] createScenes() throws MapControlException {
         
         BufferedImage image = null;
         
