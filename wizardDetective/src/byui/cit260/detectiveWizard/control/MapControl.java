@@ -12,7 +12,7 @@ import javax.swing.ImageIcon;
 
 public class MapControl {
 
-    public static Map createMap(){
+    public static Map createMap() throws MapControlException{
         
         //create new map
         Map map = new Map(5, 5);
@@ -74,7 +74,7 @@ public class MapControl {
         return scenes;
     }
 
-    private static ImageIcon getImage(Scene startingScene, String byuicit260detectiveWizardimagesfinishjpg) {
+    private static ImageIcon getImage(Scene startingScene, String byuicit260detectiveWizardimagesfinishjpg) throws MapControlException {
         System.out.println("*** function getImage ***");
         throw new MapControlException("Can not get this image.");
   

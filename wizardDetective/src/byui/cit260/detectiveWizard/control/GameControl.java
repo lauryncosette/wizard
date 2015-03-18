@@ -1,6 +1,7 @@
 
 package byui.cit260.detectiveWizard.control;
 
+import byui.cit260.detectiveWizard.exceptions.MapControlException;
 import byui.cit260.detectiveWizard.model.Game;
 import byui.cit260.detectiveWizard.model.InventoryItem;
 import byui.cit260.detectiveWizard.model.Map;
@@ -9,7 +10,7 @@ import detectiveWizard.DetectiveWizard;
 
 public class GameControl {
     
-public static void createNewGame(Player player){
+public static void createNewGame(Player player) throws MapControlException{
         
         //create new game
         Game game = new Game();
