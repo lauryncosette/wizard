@@ -1,6 +1,7 @@
 
 package byui.cit260.detectiveWizard.control;
 
+import byui.cit260.detectiveWizard.exceptions.MapControlException;
 import byui.cit260.detectiveWizard.model.Game;
 import byui.cit260.detectiveWizard.model.Location;
 import byui.cit260.detectiveWizard.model.Map;
@@ -24,7 +25,8 @@ public class MapControl {
         
         return map;
     }
-    static void moveActorsToStartingLocation(Map map) {
+    static void moveActorsToStartingLocation(Map map)
+            throws MapControlException {
         System.out.println("*** called moveActorsToStartingLocation() ***");
     }  
 
@@ -74,7 +76,8 @@ public class MapControl {
 
     private static ImageIcon getImage(Scene startingScene, String byuicit260detectiveWizardimagesfinishjpg) {
         System.out.println("*** function getImage ***");
-        return null;
+        throw new MapControlException("Can not get this image.");
+  
     }
 
     public enum SceneType{
