@@ -77,9 +77,22 @@ public static void createNewGame(Player player){
     public static InventoryItem[] getSortedInventoryList() {
         
         //get inventory list for current game
-        InventoryItem[] originalInventoryList = DetectiveWizard.getcurrentGame().getInventory();
+        InventoryItem[] originalInventoryList = DetectiveWizard.getCurrentGame().getInventory();
         
+        //clone original list
+        InventoryItem[] inventoryList = originalInventoryList.clone();
         
+        InventoryItem tempInventoryItem;
+        for (int i = 0; i < inventoryList.length-1;i++){
+            for (int j = 0; j < inventoryList.length-1-i; j++){
+                if (inventoryList[j].getDescription().compareToIgnoreCase(inventoryList[j+1].getDescription())>0){
+                    tempInventoryItem = inventoryList[j];
+                    inventoryList[j] = inventoryList[j+1];
+                    inventoryList[j+1] = tempInventoryItem;
+                }
+            }
+        }
+        return inventoryList;
     }
 
     private static class Constants {
