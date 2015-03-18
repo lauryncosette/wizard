@@ -75,8 +75,11 @@ public static void createNewGame(Player player){
     }
 
     public static InventoryItem[] getSortedInventoryList() {
-        System.out.println("\n*** getSortedInventoryList() stub function called***");
-        return null;
+        
+        //get inventory list for current game
+        InventoryItem[] originalInventoryList = DetectiveWizard.getcurrentGame().getInventory();
+        
+        
     }
 
     private static class Constants {
