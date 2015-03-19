@@ -7,6 +7,7 @@ import byui.cit260.detectiveWizard.model.Location;
 import byui.cit260.detectiveWizard.model.Map;
 import byui.cit260.detectiveWizard.model.Scene;
 import detectiveWizard.DetectiveWizard;
+import java.awt.Point;
 import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 
@@ -28,7 +29,20 @@ public class MapControl {
     static void moveActorsToStartingLocation(Map map)
             throws MapControlException {
         System.out.println("*** called moveActorsToStartingLocation() ***");
-    }  
+    }
+    
+    public static void moveActorsToLocation(Character character, Point coordinates) throws MapControlException{
+        
+        Map map = DetectiveWizard.getCurrentGame().getMap();
+        int newRow = coordinates.x-1;
+        int newColumn = coordinates.y-1;
+        
+        if (newRow < 0 || newRow >= map.getRows()|| newColumn< 0 || newColumn >= map.getColumns()){
+            throw new MapControlException ("Can not move character to location " + coordinates.x + ", "
+                                           + coordinates.y + "because that location is outside "
+                                           + "the bonds of the map.");
+        }
+    }
 
     private static Scene[] createScenes() throws MapControlException {
         
