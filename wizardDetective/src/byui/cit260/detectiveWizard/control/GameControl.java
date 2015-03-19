@@ -97,7 +97,7 @@ public static void createNewGame(Player player) throws MapControlException{
     }
 
     private static class Constants {
-        private static int NUMBER_OF_INVENTORY_ITEMS;
+        private static int NUMBER_OF_INVENTORY_ITEMS = 6;
 
         public Constants() { 
         }
