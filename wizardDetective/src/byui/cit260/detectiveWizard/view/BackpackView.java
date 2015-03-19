@@ -2,6 +2,7 @@ package byui.cit260.detectiveWizard.view;
 
 import byui.cit260.detectiveWizard.control.GameControl;
 import byui.cit260.detectiveWizard.model.InventoryItem;
+import byui.cit260.detectiveWizard.model.PhysicalInventory;
 
 public class BackpackView extends View {
 
@@ -44,8 +45,10 @@ public class BackpackView extends View {
                 + "Description");
 
         for (InventoryItem inventoryItem : inventory) {
-            System.out.println(inventoryItem.getItemName() + "\t     "
-                    + inventoryItem.getDescription() + "\t     ");
+            if (inventoryItem instanceof PhysicalInventory) {
+                System.out.println(inventoryItem.getItemName() + "\t     "
+                        + inventoryItem.getDescription() + "\t     ");
+            }
         }
     }
 

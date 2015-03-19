@@ -5,6 +5,7 @@ import byui.cit260.detectiveWizard.model.Game;
 import byui.cit260.detectiveWizard.model.InventoryItem;
 import byui.cit260.detectiveWizard.model.Map;
 import byui.cit260.detectiveWizard.model.NonphysicalInventory;
+import byui.cit260.detectiveWizard.model.PhysicalInventory;
 import byui.cit260.detectiveWizard.model.Player;
 import detectiveWizard.DetectiveWizard;
 
@@ -42,34 +43,34 @@ public class GameControl {
         blood.setItemType("notebook - clue");
         inventory[Item.blood.ordinal()] = blood;
 
-        InventoryItem hair = new InventoryItem();
+        NonphysicalInventory hair = new NonphysicalInventory();
         hair.setItemName("dark hair");
         hair.setDescription("lock of dark hair found in victims hand");
-        //hair.setItemType("notebook - clue");
+        hair.setItemType("notebook - clue");
         inventory[Item.hair.ordinal()] = hair;
 
-        InventoryItem pentagram = new InventoryItem();
+        NonphysicalInventory pentagram = new NonphysicalInventory();
         pentagram.setItemName("pentagram");
         pentagram.setDescription("pentagram inscribed on the floor around the body");
-        //pentagram.setItemType("notebook - clue");
+        pentagram.setItemType("notebook - clue");
         inventory[Item.pentagram.ordinal()] = pentagram;
 
-        InventoryItem key = new InventoryItem();
+        PhysicalInventory key = new PhysicalInventory();
         key.setItemName("key");
         key.setDescription("key to one of the 'employee only' rooms");
-        //key.setUse("backpack - opens door to wine cellar")
+        key.setUse("backpack - opens door to wine cellar");
         inventory[Item.key.ordinal()] = key;
 
-        InventoryItem murderWeapon = new InventoryItem();
+        NonphysicalInventory murderWeapon = new NonphysicalInventory();
         murderWeapon.setItemName("murder weapon");
         murderWeapon.setDescription("contains traces of victims blood but no fingerprints to help pinpoint the victim");
-        //murderWeapon.setItemType("notebook - clue")
+        murderWeapon.setItemType("notebook - clue");
         inventory[Item.murderWeapon.ordinal()] = murderWeapon;
 
-        InventoryItem caseFile = new InventoryItem();
+        NonphysicalInventory caseFile = new NonphysicalInventory();
         caseFile.setItemName("Past case file");
         caseFile.setDescription("previous case where victim was killed in an identical fashion, happened just down the street, exactly a year to the date");
-        //caseFile.setItemType("notebook - clue")
+        caseFile.setItemType("notebook - clue");
         inventory[Item.caseFile.ordinal()] = caseFile;
 
         return inventory;
