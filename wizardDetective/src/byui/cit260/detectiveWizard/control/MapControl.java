@@ -8,7 +8,6 @@ import byui.cit260.detectiveWizard.model.Scene;
 import detectiveWizard.DetectiveWizard;
 import java.awt.Point;
 import java.awt.image.BufferedImage;
-import javax.swing.ImageIcon;
 
 public class MapControl {
 
