@@ -25,15 +25,14 @@ public class MainMenuView extends View {
 
         switch (value.charAt(0)) {
             //create new game
-            case 'P':
-        {
-            try {
-                this.startNewGame();
-            } catch (MapControlException ex) {
-                Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            case 'P': {
+                try {
+                    this.startNewGame();
+                } catch (MapControlException ex) {
+                    Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
-        }
-                break;
+            break;
             //help menu
             case 'H':
                 this.displayHelpMenu();
@@ -53,7 +52,7 @@ public class MainMenuView extends View {
         }
     }
 
-    private void startNewGame() throws MapControlException{
+    private void startNewGame() throws MapControlException {
         //create new game
         GameControl.createNewGame(DetectiveWizard.getPlayer());
         //display game menu
