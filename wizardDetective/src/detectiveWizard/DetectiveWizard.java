@@ -32,7 +32,13 @@ public class DetectiveWizard {
     public static void main(String[] args) {
         //create StartPRogramView and start the program
         StartProgramView startProgramView = new StartProgramView();
+        try {
         startProgramView.startProgram();
+        } catch (throwable te) {
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            startProgramView.display();
+        }
     }
     
 }
