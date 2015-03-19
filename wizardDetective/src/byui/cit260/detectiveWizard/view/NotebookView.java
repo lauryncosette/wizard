@@ -1,13 +1,13 @@
-
 package byui.cit260.detectiveWizard.view;
 
 import byui.cit260.detectiveWizard.control.GameControl;
 import byui.cit260.detectiveWizard.model.InventoryItem;
+import byui.cit260.detectiveWizard.model.NonphysicalInventory;
 import detectiveWizard.DetectiveWizard;
 import java.util.Scanner;
 
-public class NotebookView{
-    
+public class NotebookView {
+
     //Code for displaying notebookMenu when not enough clues are accumilated
     private final String MENU = "\n"
             + "\n-------------------------------------------"
@@ -16,7 +16,7 @@ public class NotebookView{
             + "\nV - View Inventory"
             + "\nD - Description of clue"
             + "\nE - Exit";
-    
+
     //code for displaying notebook menu when enough clues are accumilated to end game
     private final String ENDMENU = "\n"
             + "\n-------------------------------------------"
@@ -26,37 +26,33 @@ public class NotebookView{
             + "\nD - Description of clue"
             + "\nF - Finish Game"
             + "\nE - Exit";
-    
 
     void displayMenu() {
-        
+
         char selection = ' ';
         do {
-            
+
             //display inventory list
             System.out.println("\n***List of items in notebook***");
-            
-            if(DetectiveWizard.getPlayer().getNumberOfClue() >=7){
+
+            if (DetectiveWizard.getPlayer().getNumberOfClue() >= 7) {
                 System.out.println(ENDMENU);
+            } else {
+                //displays the MainMenu
+                System.out.println(MENU);
             }
-            
-            else{
-            //displays the MainMenu
-            System.out.println(MENU);
-            }
-            
+
             //get user's selection
             String input = this.getInput();
             //Get the first character of the string
             selection = input.charAt(0);
-            
+
             //do action based on selection
             this.doAction(selection);
-        }
-        //an selection is not "Exit"
+        } //an selection is not "Exit"
         while (selection != 'E');
     }
-    
+
     public String getInput() {
         //indicates if input has been retrieved
         boolean valid = false;
@@ -97,7 +93,7 @@ public class NotebookView{
     }
 
     public void doAction(char choice) {
-        switch (choice){
+        switch (choice) {
             //get item description
             case 'V':
                 this.viewInventory();
@@ -119,14 +115,16 @@ public class NotebookView{
 
     private void viewInventory() {
         InventoryItem[] inventory = GameControl.getSortedInventoryList();
-        
+
         System.out.println("\nList of Inventory Items");
-        System.out.println("ItemName" + "\t" +
-                           "Description");
-        
-        for (InventoryItem inventoryItem : inventory){
-            System.out.println(inventoryItem.getItemName() + "\t     " +
-                               inventoryItem.getDescription() + "\t     ");
+        System.out.println("ItemName" + "\t"
+                + "Description");
+
+        for (InventoryItem inventoryItem : inventory) {
+            if(inventoryItem instanceof NonphysicalInventory){
+            System.out.println(inventoryItem.getItemName() + "\t     "
+                    + inventoryItem.getDescription() + "\t     ");
+            }
         }
     }
 }

@@ -31,7 +31,7 @@ public enum Characters implements Serializable {
         this.height = height;
         this.rumors = new String[3];
     }
-    
+
     //getter
     public String getRole() {
         return role;
@@ -40,7 +40,7 @@ public enum Characters implements Serializable {
     public Double getHeight() {
         return height;
     }
-    
+
     public String[] getRumors() {
         return rumors;
     }
@@ -48,7 +48,7 @@ public enum Characters implements Serializable {
     //public Game getGame(){
     //  return game;
     //}
-    
+
     //public String[] getScenes(){
     //  return scenes;
     //}

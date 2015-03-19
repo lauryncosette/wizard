@@ -1,4 +1,3 @@
-
 package byui.cit260.detectiveWizard.model;
 
 import java.io.Serializable;
@@ -15,7 +14,7 @@ public class Game implements Serializable {
     private Characters[] character;
     private Player player;
     private InventoryItem[] inventoryList;
-    
+
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
     public Game() {
         date = new Date();

@@ -21,7 +21,7 @@ public class GameMenuView extends View {
     @Override
     public void doAction(String value) {
         switch (value.charAt(0)) {
-            
+
             case 'I':
                 this.investigate();
                 break;
@@ -42,7 +42,7 @@ public class GameMenuView extends View {
                 System.out.println("\n*** Invalid selection *** Try again");
         }
     }
-    
+
     private void inventoryMenu() {
         InventoryMenuView inventoryMenu = new InventoryMenuView();
         inventoryMenu.display();

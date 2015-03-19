@@ -1,4 +1,3 @@
-
 package byui.cit260.detectiveWizard.model;
 
 import java.io.Serializable;
@@ -8,23 +7,18 @@ import java.util.Objects;
  *
  * @author lauryn
  */
-
 //neds to be an enum?
 public class Rumor implements Serializable {
 
     //because some rumors/clues are associated with the character - should there be some clues written in for the character?
-    
     //need to come up with a list of rumors/verbal clues to help the play along
     //these rumors would be an array
-    
     //each clue would be associated with a question
-    
     //What do you think about Stevie?
     //Jason - He at least tips very well.
     //Clyde - Very messy kid.  I'm always having to clean up after him and his parties.
     //Chief - There have been complaints and call-ins from the other hotel guests.
     //Gaston - He's an okay kid.  He comes here often.
-
     private String description;
 
     public Rumor() {

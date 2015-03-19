@@ -15,21 +15,21 @@ public class HelpMenuView extends View {
 
     @Override
     public void doAction(String value) {
-        
-        switch(value.charAt(0)){
-                case 'M':
-                    this.howToMove();
-                    break;
-                case 'C':
-                    this.control();
-                    break;
-                case 'I':
-                    this.investigateRoom();
-                    break;
-                case 'E':
-                    break;
-                default:
-                    System.out.println("\n*** Invalid selection *** Try again");
+
+        switch (value.charAt(0)) {
+            case 'M':
+                this.howToMove();
+                break;
+            case 'C':
+                this.control();
+                break;
+            case 'I':
+                this.investigateRoom();
+                break;
+            case 'E':
+                break;
+            default:
+                System.out.println("\n*** Invalid selection *** Try again");
         }
     }
 
@@ -39,9 +39,9 @@ public class HelpMenuView extends View {
 
     private void control() {
         System.out.println("How to look at your inventory."
-            +"\nHow to use an inventory item."
-            +"\nHow to view the map."
-            +"\nHow to use magical abilities.");
+                + "\nHow to use an inventory item."
+                + "\nHow to view the map."
+                + "\nHow to use magical abilities.");
     }
 
     private void investigateRoom() {

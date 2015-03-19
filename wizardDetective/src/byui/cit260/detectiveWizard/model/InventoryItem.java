@@ -1,12 +1,11 @@
-
 package byui.cit260.detectiveWizard.model;
 
 import java.io.Serializable;
 import java.util.Objects;
 
 //how can we make this an enum? it is inherited by two other model layers which means it cannot be an enum...
-public class InventoryItem implements Serializable{
-    
+public class InventoryItem implements Serializable {
+
     private String description;
     private String itemName;
 
@@ -43,8 +42,6 @@ public class InventoryItem implements Serializable{
         }
         return true;
     }
-    
-    
 
     public String getDescription() {
         return description;
@@ -60,5 +57,5 @@ public class InventoryItem implements Serializable{
 
     public void setItemName(String itemName) {
         this.itemName = itemName;
-    }   
+    }
 }

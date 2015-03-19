@@ -1,10 +1,9 @@
-
 package byui.cit260.detectiveWizard.model;
 
 import java.io.Serializable;
 
-public class Map implements Serializable{
-    
+public class Map implements Serializable {
+
     private Location[][] locations;
     //do we need this
     //private final Game game;
@@ -12,33 +11,33 @@ public class Map implements Serializable{
     private int columns;
 
     public Map(int rows, int columns) {
-        if (rows < 1 || columns < 1){
+        if (rows < 1 || columns < 1) {
             System.out.println("The number of rows and columns must be > 0");
             return;
         }
-        
+
         this.rows = rows;
         this.columns = columns;
-        
+
         this.locations = new Location[rows][columns];
-        
-        for (int row = 0; row < rows; row++){
-            for (int column = 0; column < columns; column++){
+
+        for (int row = 0; row < rows; row++) {
+            for (int column = 0; column < columns; column++) {
                 Location location = new Location();
                 location.setColumn(column);
                 location.setRow(row);
                 location.setVisited(false);
-                
+
                 locations[row][column] = location;
             }
         }
     }
 
-    public Location[][] getLocations(){
+    public Location[][] getLocations() {
         return locations;
     }
-    
-    public void setLocation(Location[][] locations){
+
+    public void setLocation(Location[][] locations) {
         this.locations = locations;
     }
 

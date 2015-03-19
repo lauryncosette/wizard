@@ -1,12 +1,10 @@
-
 package byui.cit260.detectiveWizard.model;
 
 import java.io.Serializable;
 
 //needs to be an enum?
-public class Location implements Serializable{
-    
-    
+public class Location implements Serializable {
+
     //class instances
     private int row;
     private int column;
@@ -17,7 +15,7 @@ public class Location implements Serializable{
     //do we need to have these?
     //private Characters[] character;
     //private Scene scene; there is only one scene at a location
-    
+
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
     public Location() {
     }

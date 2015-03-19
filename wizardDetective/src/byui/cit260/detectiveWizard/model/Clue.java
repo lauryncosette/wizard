@@ -1,16 +1,15 @@
-
 package byui.cit260.detectiveWizard.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author lauryn
  */
 
-public class Clue implements Serializable{
-  
-    
+public class Clue implements Serializable {
+
     // class instance variables
     private String itemType;
     private String itemName;
@@ -57,7 +56,6 @@ public class Clue implements Serializable{
         return true;
     }
 
-    
     public String getItemType() {
         return itemType;
     }
@@ -81,8 +79,5 @@ public class Clue implements Serializable{
     public void setItemDescription(String itemDescription) {
         this.itemDescription = itemDescription;
     }
-
-    
-    
 
 }

@@ -1,4 +1,3 @@
-
 package byui.cit260.detectiveWizard.model;
 
 import java.io.Serializable;
@@ -6,8 +5,8 @@ import java.util.Objects;
 import javax.swing.ImageIcon;
 
 //needs to be an enum?
-public class Scene implements Serializable{
-    
+public class Scene implements Serializable {
+
     //class instances
     private String description;
     private String mapSymbol;
@@ -16,21 +15,20 @@ public class Scene implements Serializable{
     //private Location location; there can only be one scene at a location at a time
     //private Characters[] character;
     //private Clue clue;
-    
+
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
     public Scene() {
     }
-    
+
     //toString()
     //alt-fn-insert (Source-Insert Code), toString(), (select all) generate
     @Override
     public String toString() {
         return "Scene{" + "description=" + description + "mapSymbol" + mapSymbol + "blocked" + blocked + '}';
     }
-    
+
     //equals(), hashCode()
     //alt-fn-insert (Source-Insert Code), equals() and hashCode(), (select all)generate
-
     @Override
     public int hashCode() {
         int hash = 3;
@@ -60,12 +58,12 @@ public class Scene implements Serializable{
         }
         return true;
     }
-    
-    public String getDescription(){
+
+    public String getDescription() {
         return description;
     }
-    
-    public void setDescription(String description){
+
+    public void setDescription(String description) {
         this.description = description;
     }
 

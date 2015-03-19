@@ -1,11 +1,10 @@
-
 package byui.cit260.detectiveWizard.model;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-public class Player implements Serializable{
-    
+public class Player implements Serializable {
+
     //class instance variables
     private String name;
     private String role;
@@ -14,22 +13,20 @@ public class Player implements Serializable{
     //class relations
     //inventory item array
     //private Game game; would this be an array or array list
-    
+
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
     public Player() {
     }
-    
+
     //toString()
     //alt-fn-insert (Source-Insert Code), toString(), (select all) generate
-
     @Override
     public String toString() {
         return "Player{" + "name=" + name + ", role=" + role + ", score=" + score + ", numberOfClue=" + numberOfClue + '}';
     }
-    
+
     //equals(), hashCode()
     //alt-fn-insert (Source-Insert Code), equals() and hashCode(), (select all)generate
-
     @Override
     public int hashCode() {
         int hash = 7;
@@ -63,36 +60,36 @@ public class Player implements Serializable{
         }
         return true;
     }
-    
-    public String getName (){
+
+    public String getName() {
         return name;
     }
-    
-    public String getRole(){
+
+    public String getRole() {
         return role;
     }
-    
-    public int getScore(){
+
+    public int getScore() {
         return score;
     }
-    
-    public int getNumberOfClue(){
+
+    public int getNumberOfClue() {
         return numberOfClue;
     }
-    
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
-    
-    public void setRole(String role){
+
+    public void setRole(String role) {
         this.role = role;
     }
-    
-    public void setScore(int score){
+
+    public void setScore(int score) {
         this.score = score;
     }
-    
-    public void setNumberOfClue(){
+
+    public void setNumberOfClue() {
         this.numberOfClue = numberOfClue;
     }
 }

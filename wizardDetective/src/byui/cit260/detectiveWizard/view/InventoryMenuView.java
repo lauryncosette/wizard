@@ -1,9 +1,9 @@
 package byui.cit260.detectiveWizard.view;
 
-public class InventoryMenuView extends View{
-    
-    public InventoryMenuView(){
-        super ("\n"
+public class InventoryMenuView extends View {
+
+    public InventoryMenuView() {
+        super("\n"
                 + "\n-------------------------------------------"
                 + "\n| Inventory Menu                          |"
                 + "\n-------------------------------------------"
@@ -14,8 +14,8 @@ public class InventoryMenuView extends View{
 
     @Override
     public void doAction(String value) {
-        
-        switch (value.charAt(0)){
+
+        switch (value.charAt(0)) {
             case 'B':
                 this.viewBackpack();
                 break;
@@ -38,5 +38,5 @@ public class InventoryMenuView extends View{
         NotebookView notebook = new NotebookView();
         notebook.displayMenu();
     }
-    
+
 }

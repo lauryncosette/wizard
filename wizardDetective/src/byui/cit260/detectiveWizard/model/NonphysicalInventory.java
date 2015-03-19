@@ -1,13 +1,12 @@
-
 package byui.cit260.detectiveWizard.model;
 
 import java.util.Objects;
 
 public class NonphysicalInventory extends InventoryItem {
-    
+
     private String ItemType;
-    
-    NonphysicalInventory() {
+
+    public NonphysicalInventory() {
     }
 
     @Override

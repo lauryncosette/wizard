@@ -1,13 +1,12 @@
-
 package byui.cit260.detectiveWizard.model;
 
 import java.util.Objects;
 
-public class PhysicalInventory extends InventoryItem{
-    
+public class PhysicalInventory extends InventoryItem {
+
     private String use;
 
-    PhysicalInventory() {
+    public PhysicalInventory() {
     }
 
     @Override
@@ -39,7 +38,7 @@ public class PhysicalInventory extends InventoryItem{
 
     public String getUse() {
         return use;
-    } 
+    }
 
     public void setUse(String use) {
         this.use = use;
