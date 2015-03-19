@@ -29,7 +29,7 @@ public class MainMenuView extends View {
                 try {
                     this.startNewGame();
                 } catch (MapControlException ex) {
-                    System.out.println("***" + ex.getMessage() + "***");
+                    System.out.println(ex.getMessage());
                 }
             }
             break;

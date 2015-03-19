@@ -1,5 +1,6 @@
 package byui.cit260.detectiveWizard.model;
 
+import java.awt.Point;
 import java.io.Serializable;
 
 public enum Characters implements Serializable {
@@ -19,6 +20,7 @@ public enum Characters implements Serializable {
     //class instances
     private final String role;
     private final double height;
+    private Point coordinates;
     //class relations
     private final String[] rumors; //this needs to be changed to an array or array list
     //Do we need to have these
@@ -52,4 +54,8 @@ public enum Characters implements Serializable {
     //public String[] getScenes(){
     //  return scenes;
     //}
+
+    public Point getCoordinates() {
+        return coordinates;
+    }
 }

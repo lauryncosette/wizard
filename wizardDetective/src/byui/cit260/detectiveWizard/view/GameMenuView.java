@@ -1,5 +1,8 @@
 package byui.cit260.detectiveWizard.view;
 
+import byui.cit260.detectiveWizard.control.MapControl;
+import byui.cit260.detectiveWizard.exceptions.MapControlException;
+
 /**
  *
  * @author lauryn
@@ -15,6 +18,7 @@ public class GameMenuView extends View {
                 + "\nV | View Score"
                 + "\nM | Main Inventory Menu"
                 + "\nN | View Map"
+                + "\nT | Travel to new location"
                 + "\nE | Exit");
     }
 
@@ -34,6 +38,9 @@ public class GameMenuView extends View {
                 break;
             case 'N':
                 this.displayMap();
+                break;
+            case 'T':
+                this.travelNewLocation();
                 break;
             //exit
             case 'E':
@@ -58,5 +65,13 @@ public class GameMenuView extends View {
 
     private void displayMap() {
         System.out.println("Shows map");
+    }
+
+    private void travelNewLocation() {
+        try {
+        MapControl.moveActorsToLocation(character, coordinates);
+        } catch (MapControlException me){
+            System.out.println(me.getMessage());
+        }
     }
 }
