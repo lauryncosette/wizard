@@ -60,9 +60,6 @@ public class MapControl {
                 + "\nsoon as possible.'");
         startingScene.setMapSymbol(" ST ");
         startingScene.setBlocked(false);
-        ImageIcon startingSceneImage = MapControl.getImage(startingScene,
-                "/byui.cit260.detectiveWizard/images/finish.jpg");
-        startingScene.setIcon(startingSceneImage);
         scenes[SceneType.start.ordinal()] = startingScene;
 
         Scene failedScene = new Scene();
@@ -70,9 +67,6 @@ public class MapControl {
                 "\nI'm sorry, you have accused the wrong person of killing the victim.");
         failedScene.setMapSymbol(" FS ");
         failedScene.setBlocked(false);
-        ImageIcon failedSceneImage = MapControl.getImage(failedScene,
-                "/byui.cit260.detectiveWizard/images/finish.jpg");
-        failedScene.setIcon(failedSceneImage);
         scenes[SceneType.failed.ordinal()] = failedScene;
 
         Scene finishScene = new Scene();
@@ -80,18 +74,9 @@ public class MapControl {
                 "\nCongratulations!  You were able to solve the mystery!");
         finishScene.setMapSymbol(" FN ");
         finishScene.setBlocked(false);
-        ImageIcon finishSceneImage = MapControl.getImage(finishScene,
-                "/byui.cit260.detectiveWizard/images/finish.jpg");
-        finishScene.setIcon(finishSceneImage);
         scenes[SceneType.finish.ordinal()] = finishScene;
 
         return scenes;
-    }
-
-    private static ImageIcon getImage(Scene startingScene, String byuicit260detectiveWizardimagesfinishjpg) throws MapControlException {
-        System.out.println("*** function getImage ***");
-        throw new MapControlException("Can not get this image.");
-
     }
 
     public enum SceneType {

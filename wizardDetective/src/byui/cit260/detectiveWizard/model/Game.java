@@ -100,7 +100,6 @@ public class Game implements Serializable {
     }
 
     public InventoryItem[] getInventory() {
-        InventoryItem[] inventory = null;
-        return inventory;
+        return this.inventoryList;
     }
 }
