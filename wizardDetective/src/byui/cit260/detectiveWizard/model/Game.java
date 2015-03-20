@@ -11,7 +11,7 @@ public class Game implements Serializable {
     private Date date;
     //class relations
     private Map map;
-    private Characters[] character;
+    private Character[] character;
     private Player player;
     private InventoryItem[] inventoryList;
 
@@ -79,11 +79,11 @@ public class Game implements Serializable {
         this.map = map;
     }
 
-    public Characters[] getCharacter() {
+    public Character[] getCharacter() {
         return character;
     }
 
-    public void setCharacter(Characters[] character) {
+    public void setCharacter(Character[] character) {
         this.character = character;
     }
 

@@ -11,9 +11,9 @@ public class Location implements Serializable {
     private Clue clue; //the clue is actually associated with the scene.  Do we need to remove it then?
     private boolean visited;
     private Scene scene;
-    private Characters[] characters;
+    private Character[] characters;
     //do we need to have these?
-    //private Characters[] character;
+    //private Character[] character;
     //private Scene scene; there is only one scene at a location
 
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
@@ -95,11 +95,11 @@ public class Location implements Serializable {
         this.scene = scene;
     }
 
-    public Characters[] getCharacters() {
+    public Character[] getCharacters() {
         return characters;
     }
 
-    public void setCharacters(Characters[] characters) {
+    public void setCharacters(Character[] characters) {
         this.characters = characters;
     }
 }

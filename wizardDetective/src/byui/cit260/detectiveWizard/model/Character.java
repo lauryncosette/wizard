@@ -3,7 +3,7 @@ package byui.cit260.detectiveWizard.model;
 import java.awt.Point;
 import java.io.Serializable;
 
-public enum Characters implements Serializable {
+public enum Character implements Serializable {
 
     //enum list
     Tim("He is your partner.", 6),
@@ -28,7 +28,7 @@ public enum Characters implements Serializable {
     //private final String[] scenes; is this to be an array or array list
 
     //constructor
-    Characters(String role, double height) {
+    Character(String role, double height) {
         this.role = role;
         this.height = height;
         this.rumors = new String[3];

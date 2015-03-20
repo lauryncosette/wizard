@@ -1,7 +1,7 @@
 package byui.cit260.detectiveWizard.control;
 
 import byui.cit260.detectiveWizard.exceptions.MapControlException;
-import byui.cit260.detectiveWizard.model.Characters;
+import byui.cit260.detectiveWizard.model.Character;
 import byui.cit260.detectiveWizard.model.Game;
 import byui.cit260.detectiveWizard.model.Location;
 import byui.cit260.detectiveWizard.model.Map;
@@ -27,15 +27,15 @@ public class MapControl {
     }
 
     public static void moveActorsToStartingLocation(Map map) throws MapControlException {
-        Characters[] character = Character.values();
+        Character[] characters = Character.values();
 
-        for (Characters character : character) {
+        for (Character character : characters) {
             Point coordinates = character.getCoordinates();
             MapControl.moveActorsToLocation(character, coordinates);
         }
     }
 
-    public static void moveActorsToLocation(Characters[] character, Point coordinates) throws MapControlException {
+    public static void moveActorsToLocation(Character character, Point coordinates) throws MapControlException {
 
         Map map = DetectiveWizard.getCurrentGame().getMap();
         int newRow = coordinates.x - 1;
