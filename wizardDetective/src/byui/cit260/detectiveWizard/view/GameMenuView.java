@@ -39,8 +39,13 @@ public class GameMenuView extends View {
             case 'N':
                 this.displayMap();
                 break;
-            case 'T':
-                this.travelNewLocation();
+            case 'T':         
+                try {
+                    this.travelNewLocation();
+            MapControl.moveActorsToLocation(character, coordinates);
+                    } catch (MapControlException me){
+            System.out.println(me.getMessage());
+        }
                 break;
             //exit
             case 'E':
@@ -68,10 +73,6 @@ public class GameMenuView extends View {
     }
 
     private void travelNewLocation() {
-        try {
-        MapControl.moveActorsToLocation(character, coordinates);
-        } catch (MapControlException me){
-            System.out.println(me.getMessage());
-        }
+        System.out.println("");
     }
 }
