@@ -43,7 +43,7 @@ public class MapControl {
 
         if (newRow < 0 || newRow >= map.getRows() || newColumn < 0 || newColumn >= map.getColumns()) {
             throw new MapControlException("Can not move character to location " + coordinates.x + ", "
-                    + coordinates.y + "because that location is outside "
+                    + coordinates.y + " because that location is outside "
                     + "the bonds of the map.");
         }
     }

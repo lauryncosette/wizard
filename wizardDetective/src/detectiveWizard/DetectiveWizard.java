@@ -34,11 +34,10 @@ public class DetectiveWizard {
         StartProgramView startProgramView = new StartProgramView();
         try {
         startProgramView.startProgram();
-        } catch (throwable te) {
+        } catch (Throwable te) {
             System.out.println(te.getMessage());
             te.printStackTrace();
-            startProgramView.display();
+            startProgramView.displayBanner();
         }
-    }
-    
+    }  
 }

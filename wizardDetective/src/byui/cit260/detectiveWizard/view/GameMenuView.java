@@ -2,6 +2,7 @@ package byui.cit260.detectiveWizard.view;
 
 import byui.cit260.detectiveWizard.control.MapControl;
 import byui.cit260.detectiveWizard.exceptions.MapControlException;
+import java.awt.Point;
 
 /**
  *
@@ -24,8 +25,10 @@ public class GameMenuView extends View {
 
     @Override
     public void doAction(String value) {
+        Character character = null;
+        
         switch (value.charAt(0)) {
-
+                
             case 'I':
                 this.investigate();
                 break;
