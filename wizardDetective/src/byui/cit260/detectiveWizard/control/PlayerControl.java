@@ -1,21 +1,24 @@
 package byui.cit260.detectiveWizard.control;
 
+import byui.cit260.detectiveWizard.exceptions.PlayerControlException;
+
 public class PlayerControl {
 
     public double calcKillerHint(double killerHeight, double characterHeight, double distance) {
 
         //if statement that determines if the inputs fit within the boudaries returning errors or positives.
         if (characterHeight <= 0 || characterHeight >= 10) {
-            return -1;
+                throw new PlayerControlException("Character's height " + characterHeight + " is not a valid number."
+                                                +"  Character's height must be greater than 0 and less than 10.");
         }
 
         if (killerHeight != 6.7) {
-            return -2;
+                throw new PlayerControlException("Killer's height " + killerHeight + " is not a valid number.");
         }
 
         //error was distane was >= 6.  6 is the desired distance number.  Simple fix.
         if (distance <= 0 || distance >= 7) {
-            return -3;
+                throw new PlayerControlException("The distance betteween the body and blood splatter is not correct.");
         }
 
         double answer = (killerHeight * -1 / distance) * distance + characterHeight;
@@ -26,15 +29,17 @@ public class PlayerControl {
     public double calcScoreFirstTry(int necessaryItem, int unnecessaryItem, int characterNumber) {
         //if statement that determines if the inputs fit within the boundaries returning errors or positives.
         if (necessaryItem <= -1 || necessaryItem >= 7) {
-            return -1;
+                throw new PlayerControlException("The number of clues in inventory cannot be negative or be greater than"
+                        + " the number of clues available.");
         }
 
         if (unnecessaryItem <= -1 || unnecessaryItem >= 43) {
-            return -2;
+                throw new PlayerControlException("The number of items in inventory cannot be negative or be greater than"
+                        + " the total number of items available.");
         }
 
         if (characterNumber <= -1 || characterNumber >= 2) {
-            return -3;
+                throw new PlayerControlException("Characters are preasigned a number.  The number is invalid.");
         }
 
         //score is not returned yet.  This was set up for testing.
