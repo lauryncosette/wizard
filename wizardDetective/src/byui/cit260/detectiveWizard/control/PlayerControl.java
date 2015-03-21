@@ -4,7 +4,7 @@ import byui.cit260.detectiveWizard.exceptions.PlayerControlException;
 
 public class PlayerControl {
 
-    public double calcKillerHint(double killerHeight, double characterHeight, double distance) {
+    public double calcKillerHint(double killerHeight, double characterHeight, double distance) throws PlayerControlException {
 
         //if statement that determines if the inputs fit within the boudaries returning errors or positives.
         if (characterHeight <= 0 || characterHeight >= 10) {
@@ -26,7 +26,7 @@ public class PlayerControl {
 
     }
 
-    public double calcScoreFirstTry(int necessaryItem, int unnecessaryItem, int characterNumber) {
+    public double calcScoreFirstTry(int necessaryItem, int unnecessaryItem, int characterNumber) throws PlayerControlException {
         //if statement that determines if the inputs fit within the boundaries returning errors or positives.
         if (necessaryItem <= -1 || necessaryItem >= 7) {
                 throw new PlayerControlException("The number of clues in inventory cannot be negative or be greater than"
