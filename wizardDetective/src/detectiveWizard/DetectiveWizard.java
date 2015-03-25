@@ -5,8 +5,11 @@ import byui.cit260.detectiveWizard.model.Player;
 import byui.cit260.detectiveWizard.model.Game;
 import byui.cit260.detectiveWizard.view.StartProgramView;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class DetectiveWizard {    
     
@@ -46,6 +49,18 @@ public class DetectiveWizard {
         catch (Exception e){
             
         }
+        finally {
+            try {
+                if (DetectiveWizard.inFile != null)
+                    DetectiveWizard.inFile.close();
+                if (DetectiveWizard.outFile != null)
+                    DetectiveWizard.outFile.close();
+            } catch (IOException ex) {
+                System.out.println("*** Error closing files ***");
+                return;
+            }
+        }
+        
         //create StartPRogramView and start the program
         StartProgramView startProgramView = new StartProgramView();
         try {
