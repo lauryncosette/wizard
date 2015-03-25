@@ -1,6 +1,8 @@
 package byui.cit260.detectiveWizard.view;
 
 import byui.cit260.detectiveWizard.control.MapControl;
+//import java.lang.Character;
+import byui.cit260.detectiveWizard.model.Character;
 import byui.cit260.detectiveWizard.exceptions.MapControlException;
 import java.awt.Point;
 
@@ -9,6 +11,8 @@ import java.awt.Point;
  * @author lauryn
  */
 public class GameMenuView extends View {
+    
+    private Point coordinates;
 
     public GameMenuView() {
         super("\n"
@@ -45,10 +49,11 @@ public class GameMenuView extends View {
             case 'T':         
                 try {
                     this.travelNewLocation();
-            MapControl.moveActorsToLocation(character, coordinates);
-                    } catch (MapControlException me){
-            System.out.println(me.getMessage());
-        }
+                    MapControl.moveActorsToLocation(character, coordinates);
+                    }
+                catch (MapControlException me){
+                    System.out.println(me.getMessage());
+                    }
                 break;
             //exit
             case 'E':

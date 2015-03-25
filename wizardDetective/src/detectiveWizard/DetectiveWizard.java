@@ -5,6 +5,7 @@ import byui.cit260.detectiveWizard.model.Player;
 import byui.cit260.detectiveWizard.model.Game;
 import byui.cit260.detectiveWizard.view.StartProgramView;
 import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
 public class DetectiveWizard {    
@@ -35,6 +36,16 @@ public class DetectiveWizard {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        try {
+            DetectiveWizard.inFile = 
+                    new BufferedReader (new InputStreamReader(System.in));
+            
+            DetectiveWizard.outFile = new PrintWriter(System.out, true);
+        }
+        catch (Exception e){
+            
+        }
         //create StartPRogramView and start the program
         StartProgramView startProgramView = new StartProgramView();
         try {
