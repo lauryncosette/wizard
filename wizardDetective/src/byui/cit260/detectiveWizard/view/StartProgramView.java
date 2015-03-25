@@ -2,8 +2,14 @@ package byui.cit260.detectiveWizard.view;
 
 import byui.cit260.detectiveWizard.control.ProgramControl;
 import byui.cit260.detectiveWizard.model.Player;
+import detectiveWizard.DetectiveWizard;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 
 public class StartProgramView {
+
+    protected final BufferedReader keyboard = DetectiveWizard.getInFile();
+    protected final PrintWriter console = DetectiveWizard.getOutFile();
 
     public void startProgram() {
 

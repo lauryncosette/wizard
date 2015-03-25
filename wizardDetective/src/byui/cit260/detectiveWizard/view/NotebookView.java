@@ -4,8 +4,13 @@ import byui.cit260.detectiveWizard.control.GameControl;
 import byui.cit260.detectiveWizard.model.InventoryItem;
 import byui.cit260.detectiveWizard.model.NonphysicalInventory;
 import detectiveWizard.DetectiveWizard;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 
 public class NotebookView {
+
+    protected final BufferedReader keyboard = DetectiveWizard.getInFile();
+    protected final PrintWriter console = DetectiveWizard.getOutFile();
 
     //Code for displaying notebookMenu when not enough clues are accumilated
     private final String MENU = "\n"
