@@ -16,6 +16,8 @@ public class DetectiveWizard {
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
 
+    private static PrintWriter logFile = null;
+
     public static Game getCurrentGame() {
         return currentGame;
     }
@@ -42,7 +44,14 @@ public class DetectiveWizard {
                     = new BufferedReader(new InputStreamReader(System.in));
 
             DetectiveWizard.outFile = new PrintWriter(System.out, true);
+
+            String filePath = "log.txt";
+            DetectiveWizard.logFile = new PrintWriter(filePath);
+
         } catch (Exception e) {
+            System.out.println("Exception: " + e.toString()
+                    + "\nCause: " + e.getCause()
+                    + "\nMessage: " + e.getMessage());
 
         } finally {
             try {
@@ -51,6 +60,9 @@ public class DetectiveWizard {
                 }
                 if (DetectiveWizard.outFile != null) {
                     DetectiveWizard.outFile.close();
+                }
+                if (DetectiveWizard.logFile != null) {
+                    DetectiveWizard.logFile.close();
                 }
             } catch (IOException ex) {
                 System.out.println("*** Error closing files ***");
@@ -83,5 +95,13 @@ public class DetectiveWizard {
 
     public static void setInFile(BufferedReader inFile) {
         DetectiveWizard.inFile = inFile;
+    }
+
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        DetectiveWizard.logFile = logFile;
     }
 }
