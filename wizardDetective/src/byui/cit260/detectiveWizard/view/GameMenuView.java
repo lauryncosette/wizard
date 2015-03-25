@@ -61,7 +61,7 @@ public class GameMenuView extends View {
                     this.travelNewLocation();
                     MapControl.moveActorsToLocation(character, coordinates);
                 } catch (MapControlException me) {
-                    System.out.println(me.getMessage());
+                    ErrorView.display(this.getClass().getName(), me.getMessage());
                 }
                 break;
             case 't':
@@ -69,7 +69,7 @@ public class GameMenuView extends View {
                     this.travelNewLocation();
                     MapControl.moveActorsToLocation(character, coordinates);
                 } catch (MapControlException me) {
-                    System.out.println(me.getMessage());
+                    ErrorView.display(this.getClass().getName(), me.getMessage());
                 }
                 break;
             //exit
