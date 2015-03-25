@@ -2,7 +2,6 @@ package byui.cit260.detectiveWizard.view;
 
 import byui.cit260.detectiveWizard.control.ProgramControl;
 import byui.cit260.detectiveWizard.model.Player;
-import java.util.Scanner;
 
 public class StartProgramView {
 
@@ -26,8 +25,8 @@ public class StartProgramView {
     }
 
     public void displayBanner() {
-        System.out.println("\n\n*******************************************");
-        System.out.println("*                                         *"
+        this.console.println("\n\n*******************************************");
+        this.console.println("*                                         *"
                 + "\n* This is the game of Wizard Detective.   *"
                 + "\n* In this game you are a detective by day *"
                 + "\n* and a wizard by night.  One night you   *"
@@ -36,7 +35,7 @@ public class StartProgramView {
                 + "\n* rich boy who was staying at the best    *"
                 + "\n* hotel in town.  The bellboy was the one *"
                 + "\n* who found the body.                     *");
-        System.out.println("*                                         *"
+        this.console.println("*                                         *"
                 + "\n* Frustratingly, there were no witnesses, *"
                 + "\n* but the night staff at the hotel has    *"
                 + "\n* been asked to stay for you to question. *"
@@ -47,7 +46,7 @@ public class StartProgramView {
                 + "\n* watched - no one has entered or left    *"
                 + "\n* the building.  It is up to you and your *"
                 + "\n* partner, Tim, to find the killer.       *");
-        System.out.println("*                                         *"
+        this.console.println("*                                         *"
                 + "\n* You must be able to search each room to *"
                 + "\n* find clues without arousing the         *"
                 + "\n* suspicion of the killer or any of the   *"
@@ -65,25 +64,25 @@ public class StartProgramView {
         String playersName = null;
 
         try {
-        //while a valid name has not been retrieved
-        while (!valid) {
+            //while a valid name has not been retrieved
+            while (!valid) {
 
-            //prompt for the player's name
-            System.out.println("Enter the player's name below:");
+                //prompt for the player's name
+                this.console.println("Enter the player's name below:");
 
-            //get the name from the keyboard and trim of the blanks
-            playersName = this.keyboard.readLine();
-            playersName = playersName.trim();
+                //get the name from the keyboard and trim of the blanks
+                playersName = this.keyboard.readLine();
+                playersName = playersName.trim();
 
-            //if the name is invalid (less than two character in length)
-            if (playersName.length() < 2) {
-                System.out.println("Invalid name = the name must not be blank");
-                //and repeat again
-                continue;
+                //if the name is invalid (less than two character in length)
+                if (playersName.length() < 2) {
+                    this.console.println("Invalid name = the name must not be blank");
+                    //and repeat again
+                    continue;
+                }
+                //exit the repetition
+                break;
             }
-            //exit the repetition
-            break;
-        }
         } catch (Exception e) {
             System.out.println("Error reading input: " + e.getMessage());
         }
@@ -92,9 +91,9 @@ public class StartProgramView {
     }
 
     private void displayWelcomeMessage(Player player) {
-        System.out.println("\n\n============================================");
-        System.out.println("\tWelcome to the game " + player.getName());
-        System.out.println("\tWe hope you have a lot of fun!");
-        System.out.println("============================================");
+        this.console.println("\n\n============================================");
+        this.console.println("\tWelcome to the game " + player.getName());
+        this.console.println("\tWe hope you have a lot of fun!");
+        this.console.println("============================================");
     }
 }

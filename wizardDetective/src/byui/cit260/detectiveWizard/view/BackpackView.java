@@ -23,30 +23,38 @@ public class BackpackView extends View {
             case 'V':
                 this.viewInventory();
                 break;
+            case 'v':
+                this.viewInventory();
+                break;
             case 'D':
+                this.description();
+                break;
+            case 'd':
                 this.description();
                 break;
             case 'E':
                 break;
+            case 'e' :
+                break;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
         }
     }
 
     private void description() {
-        System.out.println("*** description function called ***");
+        this.console.println("*** description function called ***");
     }
 
     private void viewInventory() {
         InventoryItem[] inventory = GameControl.getSortedInventoryList();
 
-        System.out.println("\nList of Inventory Items");
-        System.out.println("ItemName" + "\t"
+        this.console.println("\nList of Inventory Items");
+        this.console.println("ItemName" + "\t"
                 + "Description");
 
         for (InventoryItem inventoryItem : inventory) {
             if (inventoryItem instanceof PhysicalInventory) {
-                System.out.println(inventoryItem.getItemName() + "\t     "
+                this.console.println(inventoryItem.getItemName() + "\t     "
                         + inventoryItem.getDescription() + "\t     ");
             }
         }

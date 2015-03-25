@@ -11,6 +11,7 @@ public class Map implements Serializable {
     private int columns;
 
     public Map(int rows, int columns) {
+        //does this need to have an error message here???
         if (rows < 1 || columns < 1) {
             System.out.println("The number of rows and columns must be > 0");
             return;

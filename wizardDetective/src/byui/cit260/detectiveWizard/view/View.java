@@ -24,7 +24,7 @@ public abstract class View implements ViewInterface {
         do {
 
             //displays the MainMenu
-            System.out.println(this.promptMessage);
+            this.console.println(this.promptMessage);
 
             //get user's selection
             value = this.getInput();
@@ -45,7 +45,7 @@ public abstract class View implements ViewInterface {
             //while a valid value has has not been retrieved
             while (!valid) {
                 //prompt for the player's input
-                System.out.println("Enter menu selection below:");
+                this.console.println("Enter menu selection below:");
 
                 //get the input from the keyboard and trim of the blanks
                 input = this.keyboard.readLine();
@@ -53,7 +53,7 @@ public abstract class View implements ViewInterface {
 
                 //if the input is invalid(may need help on this) - code is running to this point - when change to <2 code outputs invalid input
                 if (input.length() < 1) {
-                    System.out.println("*** Invalid input *** input must not be blank");
+                    this.console.println("*** Invalid input *** input must not be blank");
                     //and repeat again
                     continue;
 

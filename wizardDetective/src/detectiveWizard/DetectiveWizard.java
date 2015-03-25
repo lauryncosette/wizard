@@ -45,6 +45,7 @@ public class DetectiveWizard {
             //does this system.in need to be removed or changed for the BufferedReader???
 
             DetectiveWizard.outFile = new PrintWriter(System.out, true);
+            //does this system.out need to be changed to this.console???
 
             String filePath = "log.txt";
             DetectiveWizard.logFile = new PrintWriter(filePath);

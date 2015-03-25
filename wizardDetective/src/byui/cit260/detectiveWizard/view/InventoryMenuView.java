@@ -19,13 +19,21 @@ public class InventoryMenuView extends View {
             case 'B':
                 this.viewBackpack();
                 break;
+            case 'b':
+                this.viewBackpack();
+                break;
             case 'N':
+                this.viewNotebook();
+                break;
+            case 'n':
                 this.viewNotebook();
                 break;
             case 'E':
                 break;
+            case 'e':
+                break;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
         }
     }
 
@@ -38,5 +46,4 @@ public class InventoryMenuView extends View {
         NotebookView notebook = new NotebookView();
         notebook.displayMenu();
     }
-
 }

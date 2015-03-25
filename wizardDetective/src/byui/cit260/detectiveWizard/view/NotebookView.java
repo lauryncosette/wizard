@@ -32,13 +32,13 @@ public class NotebookView {
         do {
 
             //display inventory list
-            System.out.println("\n***List of items in notebook***");
+            this.console.println("\n***List of items in notebook***");
 
             if (DetectiveWizard.getPlayer().getNumberOfClue() >= 7) {
-                System.out.println(ENDMENU);
+                this.console.println(ENDMENU);
             } else {
                 //displays the MainMenu
-                System.out.println(MENU);
+                this.console.println(MENU);
             }
 
             //get user's selection
@@ -61,7 +61,7 @@ public class NotebookView {
             //while a valid value has has not been retrieved
             while (!valid) {
                 //prompt for the player's input
-                System.out.println("Enter menu selection below:");
+                this.console.println("Enter menu selection below:");
 
                 //get the input from the keyboard and trim of the blanks
                 input = this.keyboard.readLine();
@@ -69,7 +69,7 @@ public class NotebookView {
 
                 //if the input is invalid(may need help on this) - code is running to this point - when change to <2 code outputs invalid input
                 if (input.length() < 1) {
-                    System.out.println("*** Invalid input *** input must not be blank");
+                    this.console.println("*** Invalid input *** input must not be blank");
                     //and repeat again
                     continue;
 
@@ -86,11 +86,11 @@ public class NotebookView {
     }
 
     private void description() {
-        System.out.println("\n*** description function called ***");
+        this.console.println("\n*** description function called ***");
     }
 
     private void finishGame() {
-        System.out.println("\n***finishGame function called***");
+        this.console.println("\n***finishGame function called***");
     }
 
     public void doAction(char choice) {
@@ -99,31 +99,42 @@ public class NotebookView {
             case 'V':
                 this.viewInventory();
                 break;
+            case 'v':
+                this.viewInventory();
+                break;
             case 'D':
+                this.description();
+                break;
+            case 'd':
                 this.description();
                 break;
             //finish game
             case 'F':
                 this.finishGame();
                 break;
+            case 'f':
+                this.finishGame();
+                break;
             //exit
             case 'E':
                 break;
+            case 'e':
+                break;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
         }
     }
 
     private void viewInventory() {
         InventoryItem[] inventory = GameControl.getSortedInventoryList();
 
-        System.out.println("\nList of Inventory Items");
-        System.out.println("ItemName" + "\t"
+        this.console.println("\nList of Inventory Items");
+        this.console.println("ItemName" + "\t"
                 + "Description");
 
         for (InventoryItem inventoryItem : inventory) {
             if (inventoryItem instanceof NonphysicalInventory) {
-                System.out.println(inventoryItem.getItemName() + "\t     "
+                this.console.println(inventoryItem.getItemName() + "\t     "
                         + inventoryItem.getDescription() + "\t     ");
             }
         }

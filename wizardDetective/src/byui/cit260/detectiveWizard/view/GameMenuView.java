@@ -35,14 +35,25 @@ public class GameMenuView extends View {
             case 'I':
                 this.investigate();
                 break;
+            case 'i':
+                this.investigate();
+                break;
             case 'V':
                 this.viewScore();
                 break;
-            //open inventory
+            case 'v':
+                this.viewScore();
+                break;
             case 'M':
                 this.inventoryMenu();
                 break;
+            case 'm':
+                this.inventoryMenu();
+                break;
             case 'N':
+                this.displayMap();
+                break;
+            case 'n':
                 this.displayMap();
                 break;
             case 'T':
@@ -53,11 +64,21 @@ public class GameMenuView extends View {
                     System.out.println(me.getMessage());
                 }
                 break;
+            case 't':
+                try {
+                    this.travelNewLocation();
+                    MapControl.moveActorsToLocation(character, coordinates);
+                } catch (MapControlException me) {
+                    System.out.println(me.getMessage());
+                }
+                break;
             //exit
             case 'E':
                 break;
+            case 'e':
+                break;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
         }
     }
 
@@ -67,18 +88,18 @@ public class GameMenuView extends View {
     }
 
     private void investigate() {
-        System.out.println("Allows you to investigate objects in a room");
+        this.console.println("Allows you to investigate objects in a room");
     }
 
     private void viewScore() {
-        System.out.println("Show list of top scores");
+        this.console.println("Show list of top scores");
     }
 
     private void displayMap() {
-        System.out.println("Shows map");
+        this.console.println("Shows map");
     }
 
     private void travelNewLocation() {
-        System.out.println("");
+        this.console.println("Travel to new location");
     }
 }

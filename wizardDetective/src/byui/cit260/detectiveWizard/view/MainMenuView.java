@@ -31,22 +31,42 @@ public class MainMenuView extends View {
                 }
             }
             break;
+            case 'p': {
+                try {
+                    this.startNewGame();
+                } catch (MapControlException ex) {
+                    System.out.println(ex.getMessage());
+                }
+            }
+            break;
             //help menu
             case 'H':
+                this.displayHelpMenu();
+                break;
+            case 'h':
                 this.displayHelpMenu();
                 break;
             //save game
             case 'S':
                 this.saveGame();
                 break;
+            case 's':
+                this.saveGame();
+                break;
             //load game
             case 'L':
                 this.startExistingGame();
+                break;
+            case 'l':
+                this.startExistingGame();
+                break;
             //exit
             case 'E':
                 break;
+            case 'e':
+                break;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
         }
     }
 
@@ -64,11 +84,10 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        System.out.println("*** saveGame function called ***");
+        this.console.println("*** saveGame function called ***");
     }
 
     private void startExistingGame() {
-        System.out.println("*** startExistingGame function called ***");
+        this.console.println("*** startExistingGame function called ***");
     }
-
 }
