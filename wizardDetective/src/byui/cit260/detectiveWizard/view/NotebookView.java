@@ -122,8 +122,8 @@ public class NotebookView {
 
         for (InventoryItem inventoryItem : inventory) {
             if (inventoryItem instanceof NonphysicalInventory) {
-            System.out.println(inventoryItem.getItemName() + "\t     "
-                    + inventoryItem.getDescription() + "\t     ");
+                System.out.println(inventoryItem.getItemName() + "\t     "
+                        + inventoryItem.getDescription() + "\t     ");
             }
         }
     }

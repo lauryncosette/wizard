@@ -3,8 +3,6 @@ package byui.cit260.detectiveWizard.view;
 import byui.cit260.detectiveWizard.control.GameControl;
 import byui.cit260.detectiveWizard.exceptions.MapControlException;
 import detectiveWizard.DetectiveWizard;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class MainMenuView extends View {
 
@@ -72,5 +70,5 @@ public class MainMenuView extends View {
     private void startExistingGame() {
         System.out.println("*** startExistingGame function called ***");
     }
-    
+
 }

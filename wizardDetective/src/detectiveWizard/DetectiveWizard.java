@@ -1,4 +1,3 @@
-
 package detectiveWizard;
 
 import byui.cit260.detectiveWizard.model.Player;
@@ -8,14 +7,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
-public class DetectiveWizard {    
-    
+public class DetectiveWizard {
+
     private static Game currentGame = null;
     private static Player player = null;
-    
+
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
 
@@ -34,37 +31,37 @@ public class DetectiveWizard {
     public static void setPlayer(Player player) {
         DetectiveWizard.player = player;
     }
-    
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         try {
-            DetectiveWizard.inFile = 
-                    new BufferedReader (new InputStreamReader(System.in));
-            
+            DetectiveWizard.inFile
+                    = new BufferedReader(new InputStreamReader(System.in));
+
             DetectiveWizard.outFile = new PrintWriter(System.out, true);
-        }
-        catch (Exception e){
-            
-        }
-        finally {
+        } catch (Exception e) {
+
+        } finally {
             try {
-                if (DetectiveWizard.inFile != null)
+                if (DetectiveWizard.inFile != null) {
                     DetectiveWizard.inFile.close();
-                if (DetectiveWizard.outFile != null)
+                }
+                if (DetectiveWizard.outFile != null) {
                     DetectiveWizard.outFile.close();
+                }
             } catch (IOException ex) {
                 System.out.println("*** Error closing files ***");
                 return;
             }
         }
-        
+
         //create StartPRogramView and start the program
         StartProgramView startProgramView = new StartProgramView();
         try {
-        startProgramView.startProgram();
+            startProgramView.startProgram();
         } catch (Throwable te) {
             System.out.println(te.getMessage());
             te.printStackTrace();
