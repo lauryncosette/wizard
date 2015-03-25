@@ -42,6 +42,7 @@ public class DetectiveWizard {
         try {
             DetectiveWizard.inFile
                     = new BufferedReader(new InputStreamReader(System.in));
+            //does this system.in need to be removed or changed for the BufferedReader???
 
             DetectiveWizard.outFile = new PrintWriter(System.out, true);
 

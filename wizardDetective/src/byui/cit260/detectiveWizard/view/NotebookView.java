@@ -4,7 +4,6 @@ import byui.cit260.detectiveWizard.control.GameControl;
 import byui.cit260.detectiveWizard.model.InventoryItem;
 import byui.cit260.detectiveWizard.model.NonphysicalInventory;
 import detectiveWizard.DetectiveWizard;
-import java.util.Scanner;
 
 public class NotebookView {
 
@@ -57,28 +56,30 @@ public class NotebookView {
         //indicates if input has been retrieved
         boolean valid = false;
         String input = null;
-        //keyboard input stream
-        Scanner keyboard = new Scanner(System.in);
 
-        //while a valid value has has not been retrieved
-        while (!valid) {
-            //prompt for the player's input
-            System.out.println("Enter menu selection below:");
+        try {
+            //while a valid value has has not been retrieved
+            while (!valid) {
+                //prompt for the player's input
+                System.out.println("Enter menu selection below:");
 
-            //get the input from the keyboard and trim of the blanks
-            input = keyboard.nextLine();
-            input = input.trim();
+                //get the input from the keyboard and trim of the blanks
+                input = this.keyboard.readLine();
+                input = input.trim();
 
-            //if the input is invalid(may need help on this) - code is running to this point - when change to <2 code outputs invalid input
-            if (input.length() < 1) {
-                System.out.println("*** Invalid input *** input must not be blank");
-                //and repeat again
-                continue;
+                //if the input is invalid(may need help on this) - code is running to this point - when change to <2 code outputs invalid input
+                if (input.length() < 1) {
+                    System.out.println("*** Invalid input *** input must not be blank");
+                    //and repeat again
+                    continue;
+
+                }
+                //exit the repetition
+                break;
 
             }
-            //exit the repetition
-            break;
-
+        } catch (Exception e) {
+            System.out.println("Error reading input: " + e.getMessage());
         }
         //return the input
         return input;
