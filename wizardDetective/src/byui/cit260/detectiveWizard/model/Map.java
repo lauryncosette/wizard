@@ -1,8 +1,14 @@
 package byui.cit260.detectiveWizard.model;
 
+import detectiveWizard.DetectiveWizard;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.io.Serializable;
 
 public class Map implements Serializable {
+
+    protected final BufferedReader keyboard = DetectiveWizard.getInFile();
+    protected final PrintWriter console = DetectiveWizard.getOutFile();
 
     private Location[][] locations;
     //do we need this
@@ -13,7 +19,7 @@ public class Map implements Serializable {
     public Map(int rows, int columns) {
         //does this need to have an error message here???
         if (rows < 1 || columns < 1) {
-            System.out.println("The number of rows and columns must be > 0");
+            this.console.println("The number of rows and columns must be > 0");
             return;
         }
 

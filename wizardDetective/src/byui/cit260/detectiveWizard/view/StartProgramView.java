@@ -90,7 +90,7 @@ public class StartProgramView {
                 break;
             }
         } catch (Exception e) {
-            System.out.println("Error reading input: " + e.getMessage());
+            ErrorView.display(this.getClass().getName(), "Error reading input: " + e.getMessage());
         }
         //return the name
         return playersName;
