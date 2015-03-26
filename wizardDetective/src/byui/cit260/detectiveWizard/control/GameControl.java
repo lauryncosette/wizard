@@ -1,5 +1,6 @@
 package byui.cit260.detectiveWizard.control;
 
+import byui.cit260.detectiveWizard.exceptions.GameControlException;
 import byui.cit260.detectiveWizard.exceptions.MapControlException;
 import byui.cit260.detectiveWizard.model.Game;
 import byui.cit260.detectiveWizard.model.InventoryItem;
@@ -8,6 +9,9 @@ import byui.cit260.detectiveWizard.model.NonphysicalInventory;
 import byui.cit260.detectiveWizard.model.PhysicalInventory;
 import byui.cit260.detectiveWizard.model.Player;
 import detectiveWizard.DetectiveWizard;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 public class GameControl {
 
@@ -97,8 +101,15 @@ public class GameControl {
         return inventoryList;
     }
 
-    public static void saveGame(Game currentGame, String filePath) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    //because we used an IOException we needed to create an import. Do we need to put the IOException in the GameControlException class?
+    public static void saveGame(Game currentGame, String filePath) throws GameControlException, IOException {
+        try (FileOutputStream fops = new FileOutputStream(filePath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+
+            output.writeObject(game);
+        } catch (IOException e) {
+            throw new GameControlException(e.getMessage());
+        }
     }
 
     private static class Constants {

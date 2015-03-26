@@ -12,9 +12,12 @@ public class Game implements Serializable {
     //class relations
     private Map map;
     private Character[] character;
+    private Clue clue;
     private Player player;
     private InventoryItem[] inventoryList;
-
+    private Rumor rumor;
+    private Scene scene;
+    
     //alt-fn-insert (Source-Insert Code), constructor, (do not select anything) generate
     public Game() {
         date = new Date();
@@ -101,5 +104,29 @@ public class Game implements Serializable {
 
     public InventoryItem[] getInventory() {
         return this.inventoryList;
+    }
+
+    public Clue getClue() {
+        return clue;
+    }
+
+    public void setClue(Clue clue) {
+        this.clue = clue;
+    }
+
+    public Rumor getRumor() {
+        return rumor;
+    }
+
+    public void setRumor(Rumor rumor) {
+        this.rumor = rumor;
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
     }
 }
