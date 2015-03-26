@@ -66,7 +66,7 @@ public class MainMenuView extends View {
             case 'e':
                 break;
             default:
-                this.console.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(), "\n*** Invalid selection *** Try again");
         }
     }
 
@@ -84,7 +84,15 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        this.console.println("*** saveGame function called ***");
+        this.console.println("\n\nEnter the file path for file where the game is to be saved.");
+        
+        String filePath = this.getInput();
+        
+        try{
+            GameControl.saveGame(DetectiveWizard.getCurrentGame(), filePath);
+        } catch (Exception ex) {
+            ErrorView.display(this.getClass().getName(), ex.getMessage());
+        }
     }
 
     private void startExistingGame() {
