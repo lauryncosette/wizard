@@ -117,17 +117,17 @@ public class GameControl {
 
     public static void getSavedGame(String filePath) throws GameControlException {
         Game game = null;
-        
-        try (FileInputStream fips = new FileInputStream(filePath)){
+
+        try (FileInputStream fips = new FileInputStream(filePath)) {
             ObjectInputStream input = new ObjectInputStream(fips);
-            
+
             game = (Game) output.readObject();
-        } catch (FileNotFoundException fnfe){
+        } catch (FileNotFoundException fnfe) {
             throw new GameControlException(fnfe.getMessage());
         } catch (Exception e) {
             throw new GameControlException(e.getMessage());
         }
-        
+
         DetectiveWizard.setCurrentGame(game);
     }
 
