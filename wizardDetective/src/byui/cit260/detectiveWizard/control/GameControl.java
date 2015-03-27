@@ -107,6 +107,7 @@ public class GameControl {
     //because we used an IOException we needed to create an import. Do we need to put the IOException in the GameControlException class?
     public static void saveGame(Game currentGame, String filePath) throws GameControlException, IOException {
         try (FileOutputStream fops = new FileOutputStream(filePath)) {
+            Game game = null;
             ObjectOutputStream output = new ObjectOutputStream(fops);
 
             output.writeObject(game);
