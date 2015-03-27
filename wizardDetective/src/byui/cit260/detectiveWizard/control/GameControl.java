@@ -9,8 +9,11 @@ import byui.cit260.detectiveWizard.model.NonphysicalInventory;
 import byui.cit260.detectiveWizard.model.PhysicalInventory;
 import byui.cit260.detectiveWizard.model.Player;
 import detectiveWizard.DetectiveWizard;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 public class GameControl {
@@ -110,6 +113,22 @@ public class GameControl {
         } catch (IOException e) {
             throw new GameControlException(e.getMessage());
         }
+    }
+
+    public static void getSavedGame(String filePath) throws GameControlException {
+        Game game = null;
+        
+        try (FileInputStream fips = new FileInputStream(filePath)){
+            ObjectInputStream input = new ObjectInputStream(fips);
+            
+            game = (Game) output.readObject();
+        } catch (FileNotFoundException fnfe){
+            throw new GameControlException(fnfe.getMessage());
+        } catch (Exception e) {
+            throw new GameControlException(e.getMessage());
+        }
+        
+        DetectiveWizard.setCurrentGame(game);
     }
 
     private static class Constants {

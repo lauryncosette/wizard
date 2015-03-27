@@ -85,10 +85,10 @@ public class MainMenuView extends View {
 
     private void saveGame() {
         this.console.println("\n\nEnter the file path for file where the game is to be saved.");
-        
+
         String filePath = this.getInput();
-        
-        try{
+
+        try {
             GameControl.saveGame(DetectiveWizard.getCurrentGame(), filePath);
         } catch (Exception ex) {
             ErrorView.display(this.getClass().getName(), ex.getMessage());
@@ -96,6 +96,17 @@ public class MainMenuView extends View {
     }
 
     private void startExistingGame() {
-        this.console.println("*** startExistingGame function called ***");
+        this.console.println("\n\nEnter the file path for file where the game is to be saved");
+
+        String filePath = this.getInput();
+
+        try {
+            GameControl.getSavedGame(filePath);
+        } catch (Exception ex) {
+            ErrorView.display("Main Menu View", ex.getMessage());
+        }
+
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 }
