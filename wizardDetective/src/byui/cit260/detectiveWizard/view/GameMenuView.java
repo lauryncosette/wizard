@@ -23,7 +23,7 @@ public class GameMenuView extends View {
                 + "\nM | Main Inventory Menu"
                 + "\nN | View Map"
                 + "\nT | Travel to new location"
-                + "\nP | Print Report - Entire Inventory"
+                + "\nP | Print Reports"
                 + "\nE | Exit");
     }
 
@@ -58,10 +58,10 @@ public class GameMenuView extends View {
                 this.displayMap();
                 break;
             case 'P':
-                this.printInventory();
+                this.printReport();
                 break;
             case 'p':
-                this.printInventory();
+                this.printReport();
                 break;
             case 'T':
                 try {
@@ -110,7 +110,7 @@ public class GameMenuView extends View {
         this.console.println("Travel to new location");
     }
 
-    private void printInventory() {
-        this.console.println("Print report of entire inventory list");
+    private void printReport() {
+        this.console.println("Print report");
     }
 }
