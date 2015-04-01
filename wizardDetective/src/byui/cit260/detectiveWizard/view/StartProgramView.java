@@ -16,7 +16,7 @@ public class StartProgramView extends View {
 //    protected final PrintWriter console = DetectiveWizard.getOutFile();
 
     public void startProgram() {
-        System.out.println("test2");
+//        System.out.println("test2");
         //Display the banner screen - tested/passed
         this.displayBanner();
 
