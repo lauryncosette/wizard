@@ -49,7 +49,17 @@ public class DetectiveWizard {
 
             String filePath = "log.txt";
             DetectiveWizard.logFile = new PrintWriter(filePath);
-
+//            
+            //create StartPRogramView and start the program
+            StartProgramView startProgramView = new StartProgramView();
+            try {
+                startProgramView.startProgram();
+            } catch (Throwable te) {
+//            System.out.println("From main");
+                System.out.println(te.getMessage());
+                te.printStackTrace();
+                startProgramView.displayBanner();
+            }
         } catch (Exception e) {
             System.out.println("Exception: " + e.toString()
                     + "\nCause: " + e.getCause()
@@ -71,16 +81,8 @@ public class DetectiveWizard {
                 return;
             }
         }
+//        outFile.println("test");
 
-        //create StartPRogramView and start the program
-        StartProgramView startProgramView = new StartProgramView();
-        try {
-            startProgramView.startProgram();
-        } catch (Throwable te) {
-            System.out.println(te.getMessage());
-            te.printStackTrace();
-            startProgramView.displayBanner();
-        }
     }
 
     public static PrintWriter getOutFile() {

@@ -6,13 +6,17 @@ import detectiveWizard.DetectiveWizard;
 import java.io.BufferedReader;
 import java.io.PrintWriter;
 
-public class StartProgramView {
+public class StartProgramView extends View {
 
-    protected final BufferedReader keyboard = DetectiveWizard.getInFile();
-    protected final PrintWriter console = DetectiveWizard.getOutFile();
+    public StartProgramView() {
+        super("");
+    }
+
+//    protected final BufferedReader keyboard = DetectiveWizard.getInFile();
+//    protected final PrintWriter console = DetectiveWizard.getOutFile();
 
     public void startProgram() {
-
+        System.out.println("test2");
         //Display the banner screen - tested/passed
         this.displayBanner();
 
@@ -31,6 +35,7 @@ public class StartProgramView {
     }
 
     public void displayBanner() {
+//        System.out.println("test");
         this.console.println("\n\n*******************************************");
         this.console.println("*                                         *"
                 + "\n* This is the game of Wizard Detective.   *"
@@ -101,5 +106,10 @@ public class StartProgramView {
         this.console.println("\tWelcome to the game " + player.getName());
         this.console.println("\tWe hope you have a lot of fun!");
         this.console.println("============================================");
+    }
+
+    @Override
+    public void doAction(String Value) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
