@@ -122,7 +122,7 @@ public class GameControl {
         try (FileInputStream fips = new FileInputStream(filePath)) {
             ObjectInputStream input = new ObjectInputStream(fips);
 
-            game = (Game) output.readObject();
+            game = (Game) input.readObject();
         } catch (FileNotFoundException fnfe) {
             throw new GameControlException(fnfe.getMessage());
         } catch (Exception e) {
