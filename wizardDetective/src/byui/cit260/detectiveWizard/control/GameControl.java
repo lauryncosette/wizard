@@ -79,6 +79,12 @@ public class GameControl {
         caseFile.setDescription("previous case where victim was killed in an identical fashion, happened just down the street, exactly a year to the date");
         caseFile.setItemType("notebook - clue");
         inventory[Item.caseFile.ordinal()] = caseFile;
+        
+        PhysicalInventory potion = new PhysicalInventory();
+        potion.setItemName("Mana Potion");
+        potion.setDescription("Restores 10 points of mana.");
+        potion.setUse("backpack - restores mana");
+        inventory[Item.potion.ordinal()] = potion;
 
         return inventory;
     }
@@ -134,7 +140,7 @@ public class GameControl {
 
     private static class Constants {
 
-        private static int NUMBER_OF_INVENTORY_ITEMS = 6;
+        private static int NUMBER_OF_INVENTORY_ITEMS = 7;
 
         public Constants() {
         }
@@ -147,6 +153,7 @@ public class GameControl {
         pentagram,
         key,
         murderWeapon,
+        potion,
         caseFile;
     }
 }
