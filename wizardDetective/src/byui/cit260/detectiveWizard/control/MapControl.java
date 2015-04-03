@@ -79,6 +79,13 @@ public class MapControl {
         finishScene.setMapSymbol(" FN ");
         finishScene.setBlocked(false);
         scenes[SceneType.finish.ordinal()] = finishScene;
+        
+        Scene kitchenScene = new Scene();
+        kitchenScene.setDescription(
+                "\nOnly employees are allowed in the kitchen.");
+        kitchenScene.setMapSymbol(" KT ");
+        kitchenScene.setBlocked(false);
+        scenes[SceneType.kitchen.ordinal()] = kitchenScene;
 
         return scenes;
     }
@@ -87,7 +94,32 @@ public class MapControl {
 
         start,
         failed,
-        finish;
+        finish,
+        kitchen,
+        entryRoom,
+        bedroom,
+        bathroom,
+        mainLobby,
+        janitorOffice,
+        janitorCloset,
+        wineCeller,
+        banquetHall,
+        laundryRoom,
+        room101,
+        room102,
+        room103,
+        room104,
+        room105,
+        room106,
+        room107,
+        room108,
+        room109,
+        room110,
+        room111,
+        room112,
+        pool,
+        lounge,
+        bar;
     }
 
     private static void assignScenesToLocations(Map map, Scene[] scenes) {
