@@ -2,8 +2,16 @@ package byui.cit260.detectiveWizard.control;
 
 import byui.cit260.detectiveWizard.exceptions.PlayerControlException;
 
-public class PlayerControl {
+public class PlayerControl throws PlayerControlException {
 
+    /**
+     *
+     * @param killerHeight
+     * @param characterHeight
+     * @param distance
+     * @return
+     * @throws PlayerControlException
+     */
     public double calcKillerHint(double killerHeight, double characterHeight, double distance) throws PlayerControlException {
 
         //if statement that determines if the inputs fit within the boudaries returning errors or positives.
