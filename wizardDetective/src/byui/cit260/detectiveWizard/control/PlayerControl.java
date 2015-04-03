@@ -2,7 +2,7 @@ package byui.cit260.detectiveWizard.control;
 
 import byui.cit260.detectiveWizard.exceptions.PlayerControlException;
 
-public class PlayerControl throws PlayerControlException {
+public class PlayerControl {
 
     /**
      *
