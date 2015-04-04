@@ -21,7 +21,7 @@ public class StartProgramView extends View {
         this.displayBanner();
 
         //prompt the player to enter their name, retrieve the name of the player - tested/passed
-        String playersName = this.getPlayersName();
+       String playersName = this.getPlayersName();
 
         //create and save the player object - tested/passed
         Player player = ProgramControl.createPlayer(playersName);

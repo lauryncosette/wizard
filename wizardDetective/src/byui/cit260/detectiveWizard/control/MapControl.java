@@ -25,10 +25,11 @@ public class MapControl {
 
         return map;
     }
-
+    
     public static void moveActorsToStartingLocation(Map map) throws MapControlException {
         Character[] characters = Character.values();
 
+//        System.out.println("test please work");
         for (Character character : characters) {
             Point coordinates = character.getCoordinates();
             MapControl.moveActorsToLocation(character, coordinates);
@@ -36,7 +37,7 @@ public class MapControl {
     }
 
     public static void moveActorsToLocation(Character character, Point coordinates) throws MapControlException {
-
+//        System.out.println("test movetolocation");
         Map map = DetectiveWizard.getCurrentGame().getMap();
         int newRow = coordinates.x - 1;
         int newColumn = coordinates.y - 1;
@@ -51,7 +52,7 @@ public class MapControl {
     private static Scene[] createScenes() throws MapControlException {
 
         BufferedImage image = null;
-
+//        System.out.println("test buffered image");
         Game game = DetectiveWizard.getCurrentGame();
 
         Scene[] scenes = new Scene[SceneType.values().length];
