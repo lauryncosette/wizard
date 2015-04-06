@@ -46,13 +46,13 @@ public class HelpMenuView extends View {
 
     private void howToMove() {
         this.console.println("To travel to a new location open the Game Menu and select 'Travel to New Location.' Once that is open"
-                + "type in the coordinates of the location that you want to travel to 'x' and 'y.'");
+                + "\ntype in the coordinates of the location that you want to travel to 'x' and 'y.'");
     }
 
     private void control() {
         this.console.println("Open up the Game Menu and select 'Inventory Menu for a list of your inventory items!"
                 + "\nOpen up the Backpack from the Inventory Menu and select on the item that you wish to use."
-                + "\nOpen up the Game Menu to view the Map by selecting 'Display Map."
+                + "\nOpen up the Game Menu to view the Map by selecting 'Display Map.'"
                 + "\nHow to use magical abilities.");
     }
 
