@@ -89,7 +89,7 @@ public class GameControl {
         return inventory;
     }
 
-    public static InventoryItem[] getSortedInventoryList() {
+    public static InventoryItem[] getSortedInventoryList() throws GameControlException {
 
         //get inventory list for current game
         InventoryItem[] originalInventoryList = DetectiveWizard.getCurrentGame().getInventory();
@@ -104,6 +104,8 @@ public class GameControl {
                     tempInventoryItem = inventoryList[j];
                     inventoryList[j] = inventoryList[j + 1];
                     inventoryList[j + 1] = tempInventoryItem;
+                    throw new GameControlException("That is not the proper inventory item for this"+
+                            "\npart of the game!");
                 }
             }
         }
@@ -118,7 +120,7 @@ public class GameControl {
 
             output.writeObject(game);
         } catch (IOException e) {
-            throw new GameControlException(e.getMessage());
+            throw new GameControlException("Cannot save game because that is not a proper file path.");
         }
     }
 
